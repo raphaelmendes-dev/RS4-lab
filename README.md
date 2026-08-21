@@ -11,6 +11,8 @@ Laboratório de experimentos da RS4 Machine.
 - `/metrics` - Dados de performance coletados
 - `/docs` - Guias e referências
 
+- Teste passo 02 - git.
+
 # RS4 Machine Experimental Lab
 
 > Research, experimentation, and optimization of AI systems focused on low-latency performance.
