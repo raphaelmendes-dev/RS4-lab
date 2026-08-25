@@ -10,7 +10,7 @@ Projeto: RS4-Lab
 
 ## 1. HIPÓTESE
 
-Um agente de IA pode aumentar a capacidade operacional de Rafael
+Um agente de IA pode aumentar a capacidade operacional de Raphael
 na execução de tarefas técnicas delimitadas, reduzindo tempo e
 esforço sem degradar significativamente:
 
@@ -47,7 +47,7 @@ O objetivo é produzir evidências que permitam decidir:
 
 O RS4 continua sendo o método.
 
-Rafael continua sendo o decisor final.
+Raphael continua sendo o decisor final.
 
 O agente executa dentro do escopo delegado.
 
@@ -55,7 +55,7 @@ Modelo:
 
 RS4
 ↓
-Rafael — decisão
+Raphael — decisão
 ↓
 Tarefa delimitada
 ↓
@@ -77,7 +77,7 @@ Próxima decisão
 
 O agente pode produzir informação, código, análise ou proposta.
 
-A decisão continua sendo de Rafael.
+A decisão continua sendo de Raphael.
 
 ---
 
@@ -249,14 +249,14 @@ Eles não podem:
 - assumir autoridade sobre o projeto;
 - aprovar sozinhos uma alteração crítica;
 - colocar uma alteração relevante em produção;
-- substituir o entendimento de Rafael;
+- substituir o entendimento de Raphael;
 - decidir sozinhos que uma solução está correta.
 
 ---
 
-## 8. PAPEL DE RAFAEL
+## 8. PAPEL DE Raphael
 
-Rafael permanece como:
+Raphael permanece como:
 
 - decisor;
 - responsável pela autorização;
@@ -267,7 +267,7 @@ Rafael permanece como:
 - responsável pelo aprendizado obtido no experimento.
 
 O objetivo da utilização de agentes é aumentar a capacidade
-de Rafael, não criar dependência.
+de Raphael, não criar dependência.
 
 ---
 
@@ -324,7 +324,7 @@ Exemplos:
 
 ### Testador 4 — Humano
 
-Rafael responde:
+Raphael responde:
 
 "Eu entendo o que foi feito e consigo assumir a responsabilidade
 por isso?"
@@ -356,8 +356,8 @@ Cada tarefa experimental deverá seguir, sempre que possível:
 7. Procurar problemas.
 8. Coletar evidências.
 9. Registrar métricas.
-10. Rafael revisar e compreender o resultado.
-11. Rafael testar e, quando possível, depurar.
+10. Raphael revisar e compreender o resultado.
+11. Raphael testar e, quando possível, depurar.
 12. Registrar o resultado.
 13. Registrar o aprendizado.
 14. Tomar a próxima decisão.
@@ -376,7 +376,7 @@ EVIDÊNCIAS
 ↓
 MÉTRICAS
 ↓
-RAFAEL ANALISA
+Raphael ANALISA
 ↓
 DECISÃO
 
@@ -395,14 +395,14 @@ As principais métricas do experimento serão:
 | Quantidade de alterações | Medir volume produzido |
 | Código alterado após revisão | Medir necessidade de intervenção |
 | Testes executados | Medir cobertura da verificação |
-| Intervenções humanas | Medir quanto Rafael precisou interferir |
-| Compreensão de Rafael | Medir aprendizado e controle |
+| Intervenções humanas | Medir quanto Raphael precisou interferir |
+| Compreensão de Raphael | Medir aprendizado e controle |
 | Resultado final | Verificar se a tarefa atingiu o objetivo |
 
 A velocidade isoladamente não determina sucesso.
 
 Um agente que termina mais rápido, mas exige grande quantidade
-de correções ou produz uma solução que Rafael não compreende,
+de correções ou produz uma solução que Raphael não compreende,
 não representa necessariamente ganho operacional.
 
 ---
@@ -454,7 +454,7 @@ A contenção é princípio permanente do uso de agentes no RS4.
 
 Regras:
 
-1. Rafael permanece como decisor final.
+1. Raphael permanece como decisor final.
 2. Todo agente recebe apenas o escopo necessário.
 3. Todo sistema autônomo deve poder ser interrompido.
 4. Decisões críticas não são delegadas completamente.
@@ -482,7 +482,7 @@ Ela deverá ser:
 - mensurável;
 - de baixo risco;
 - suficientemente técnica para permitir comparação;
-- suficientemente simples para Rafael compreender o resultado.
+- suficientemente simples para Raphael compreender o resultado.
 
 A tarefa será definida antes da execução do agente.
 
@@ -541,7 +541,7 @@ Resultado:
 
 ### Compreensão humana
 
-Pontuação Rafael:
+Pontuação Raphael:
 
 0 — não entendo
 
