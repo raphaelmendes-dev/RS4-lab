@@ -1,0 +1,182 @@
+{
+  "experiment": {
+    "id": "experiment-001",
+    "name": "Local Triage Automation",
+    "date": "2026-08-27",
+    "sample_size": 6,
+    "evaluation_scale": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "baseline": {
+    "type": "human",
+    "reference": "baseline.md",
+    "files": [
+      {
+        "file": "etapa1.docx",
+        "decision": "S",
+        "processing_time_seconds": 30
+      },
+      {
+        "file": "INT_ia.docx",
+        "decision": "S",
+        "processing_time_seconds": 54
+      },
+      {
+        "file": "makedown.md",
+        "decision": "S",
+        "processing_time_seconds": 19
+      },
+      {
+        "file": "proposta_maltbot.docx",
+        "decision": "N",
+        "processing_time_seconds": 13
+      },
+      {
+        "file": "resultado.txt",
+        "decision": "N",
+        "processing_time_seconds": 24
+      },
+      {
+        "file": "Como estruturar... .docx",
+        "decision": "S",
+        "processing_time_seconds": 43
+      }
+    ],
+    "summary": {
+      "total_files": 6,
+      "approved": 4,
+      "not_approved": 2,
+      "total_time_seconds": 183,
+      "average_time_seconds": 30.5
+    }
+  },
+  "models": [
+    {
+      "model": "llama3.2:3b",
+      "files": [
+        {
+          "file": "etapa1.docx",
+          "read_time_seconds": 89.05,
+          "total_time_seconds": 105.57,
+          "quality_score": 2,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "INT_ia.docx",
+          "read_time_seconds": 54.03,
+          "total_time_seconds": 63.5,
+          "quality_score": 2,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "makedown.md",
+          "read_time_seconds": 61.53,
+          "total_time_seconds": 173.48,
+          "quality_score": 0,
+          "error": true,
+          "observation": "Não obedeceu ao formato solicitado. O documento tinha aproximadamente 300 linhas e o modelo produziu um resumo de aproximadamente 202 linhas, sem apresentar adequadamente os pontos centrais."
+        },
+        {
+          "file": "proposta_maltbot.docx",
+          "read_time_seconds": 7.2,
+          "total_time_seconds": 15.7,
+          "quality_score": 2,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "resultado.txt",
+          "read_time_seconds": 9.58,
+          "total_time_seconds": 22.18,
+          "quality_score": 2,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "Como estruturar... .docx",
+          "read_time_seconds": 17.72,
+          "total_time_seconds": 32.6,
+          "quality_score": 2,
+          "error": false,
+          "observation": null
+        }
+      ],
+      "summary": {
+        "total_files": 6,
+        "total_time_seconds": 413.03,
+        "average_time_seconds": 68.84,
+        "quality_average": 1.67
+      }
+    },
+    {
+      "model": "qwen2.5:3b",
+      "files": [
+        {
+          "file": "etapa1.docx",
+          "read_time_seconds": 16.75,
+          "total_time_seconds": 20.71,
+          "quality_score": 3,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "INT_ia.docx",
+          "read_time_seconds": 45.99,
+          "total_time_seconds": 57.81,
+          "quality_score": 3,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "makedown.md",
+          "read_time_seconds": 39.46,
+          "total_time_seconds": 170.09,
+          "quality_score": 1,
+          "error": true,
+          "observation": "Não conseguiu produzir uma explicação simples de um arquivo grande e não respeitou o limite de linhas definido no protocolo."
+        },
+        {
+          "file": "proposta_maltbot.docx",
+          "read_time_seconds": 7.8,
+          "total_time_seconds": 12.9,
+          "quality_score": 3,
+          "error": false,
+          "observation": "Foi claro, entregou a essência e utilizou 3 linhas."
+        },
+        {
+          "file": "resultado.txt",
+          "read_time_seconds": 8.54,
+          "total_time_seconds": 19.56,
+          "quality_score": 3,
+          "error": false,
+          "observation": null
+        },
+        {
+          "file": "Como estruturar... .docx",
+          "read_time_seconds": 17.86,
+          "total_time_seconds": 28.95,
+          "quality_score": 3,
+          "error": false,
+          "observation": null
+        }
+      ],
+      "summary": {
+        "total_files": 6,
+        "total_time_seconds": 310.02,
+        "average_time_seconds": 51.67,
+        "quality_average": 2.67
+      }
+    }
+  ],
+  "protocol": {
+    "same_files": true,
+    "same_task": true,
+    "same_prompt": true,
+    "same_human_operator": true,
+    "timing_method": "manual"
+  }
+}
