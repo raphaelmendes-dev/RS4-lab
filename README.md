@@ -1,44 +1,61 @@
-# RS4 Lab
+<div align="center">
 
-Laboratório experimental da **RS4 Machine**.
+# 🧪 RS4 Lab
 
-> Experimentar primeiro. Medir. Entender. Só então escalar.
+**Rs4Machine's Experimental Lab**
 
----
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Status](https://img.shields.io/badge/Status-Under%20construction-yellow)
 
-## O que é o RS4 Lab
+[🇧🇷 Português](README.pt-BR.md) · **🇺🇸 English (this file)**
 
-O RS4 Lab é um espaço de experimentação controlada em sistemas inteligentes, agentes de IA e engenharia de software.
+> Experiment first. Measure. Understand. Only then scale.
 
-Não é uma startup.
-
-Não é um playground de agentes.
-
-É um laboratório com método.
-
-Aqui registramos hipóteses, executamos experimentos pequenos, coletamos evidências e decidimos com base em dados — mantendo o humano como decisor final.
+</div>
 
 ---
 
-## Princípios
+## 📑 Table of Contents
 
-1. O humano permanece como decisor final e responsável pelo resultado.
-
-2. Todo sistema autônomo deve ter forma clara, rápida e documentada de ser interrompido.
-
-3. Decisões críticas nunca são delegadas completamente a agentes.
-
-4. O entendimento e a capacidade de depurar não podem ser terceirizados.
-
-5. Planos de contingência fazem parte do método, não são opcionais.
-
-6. Quanto maior o impacto potencial da tarefa, maior deve ser o nível de supervisão e restrição.
+- [What is RS4 Lab](#-what-is-rs4-lab)
+- [Principles](#-principles)
+- [Current Structure](#️-current-structure)
+- [Experiments](#-experiments)
+- [Working Model](#-working-model)
+- [Verification Layers](#-verification-layers)
+- [About Agents](#-about-agents)
+- [Capital Side (Future)](#-capital-side-future)
+- [Status](#-status)
+- [Author](#-author)
 
 ---
 
-## Estrutura atual
+## 🎯 What is RS4 Lab
 
-```text
+RS4 Lab is a space for controlled experimentation in intelligent systems, AI agents, and software engineering.
+
+It's not a startup.
+It's not an agent playground.
+It's a lab with a method.
+
+Here we log hypotheses, run small experiments, collect evidence, and decide based on data — always keeping a human as the final decision-maker.
+
+---
+
+## 🧭 Principles
+
+1. A human remains the final decision-maker and is accountable for the outcome.
+2. Every autonomous system must have a clear, fast, and documented way to be interrupted.
+3. Critical decisions are never fully delegated to agents.
+4. Understanding and the ability to debug can never be outsourced.
+5. Contingency plans are part of the method, not optional.
+6. The greater a task's potential impact, the greater the level of supervision and restriction must be.
+
+---
+
+## 🏗️ Current Structure
+
+```
 experiments/
 ├── 001-architecture-first
 ├── 002-pipeline-validation
@@ -47,111 +64,110 @@ experiments/
 
 metrics/
 docs/
+```
 
-Cada experimento possui sua própria documentação, evidências e métricas conforme a necessidade.
+Each experiment has its own documentation, evidence, and metrics as needed.
 
-Experimentos
-#	Nome	Status	Início
-001	Architecture First	Concluído	Ago/2026
-002	Pipeline Validation	Concluído	Ago/2026
-003	Agent-Assisted Development	Hipótese em avaliação	22/08/2026
-004	Local Triage Automation	Em experimentação	Ago/2026
-Experiment-003 — Agent-Assisted Development
+---
 
-Primeiros experimentos com agentes atuando como operadores dentro de tarefas delimitadas.
+## 🔬 Experiments
 
-O objetivo é observar capacidade de execução, necessidade de intervenção humana, qualidade do resultado e relação entre autonomia e supervisão.
+| # | Name | Status | Started |
+|---|---|---|---|
+| 001 | Architecture First | Completed | Aug/2026 |
+| 002 | Pipeline Validation | Completed | Aug/2026 |
+| 003 | Agent-Assisted Development | Hypothesis under evaluation | 08/22/2026 |
+| 004 | Local Triage Automation | Under experimentation | Aug/2026 |
 
-Experiment-004 — Local Triage Automation
+### Experiment-003 — Agent-Assisted Development
 
-Experimento voltado à avaliação de modelos locais em uma tarefa de triagem de arquivos.
+First experiments with agents acting as operators within scoped tasks.
 
-O experimento utiliza um baseline humano como referência e registra métricas de tempo e qualidade para comparação entre modelos.
+The goal is to observe execution capability, the need for human intervention, output quality, and the relationship between autonomy and supervision.
 
-Primeira bateria registrada com:
+### Experiment-004 — Local Triage Automation
 
-Llama 3.2 3B
-Qwen 2.5 3B
+Experiment focused on evaluating local models on a file-triage task.
 
-Os resultados ainda são experimentais e não representam uma conclusão sobre superioridade da automação.
+The experiment uses a human baseline as a reference and logs time and quality metrics to compare models.
 
-Modelo de trabalho
+First recorded batch with:
 
-RS4 (método)
+- Llama 3.2 3B
+- Qwen 2.5 3B
 
-↓
+Results are still experimental and do not represent a conclusion about automation's superiority.
 
-Raphael — decisão
+---
 
-↓
+## 🔁 Working Model
 
-Tarefa delimitada
+```mermaid
+flowchart TD
+    A["RS4 (method)"] --> B["Raphael — decision"]
+    B --> C["Scoped task"]
+    C --> D["Agent — execution (within scope)"]
+    D --> E["Verification (Tester 1 to 4)"]
+    E --> F["Evidence → Results → Data"]
+    F --> G["Analysis → Learning"]
+    G --> H["Next decision"]
+    H --> B
+```
 
-↓
+---
 
-Agente — execução (dentro do escopo)
+## ✅ Verification Layers
 
-↓
+| Tester | Role |
+|---|---|
+| **Tester 1** | Machine (automated tests) |
+| **Tester 2** | Verifier agent |
+| **Tester 3** | Measurement (metrics) |
+| **Tester 4** | Human (0–3 understanding scale) |
 
-Verificação (Testador 1 a 4)
+---
 
-↓
+## 🤖 About Agents
 
-Evidências → Resultados → Dados
+Agents execute within their delegated scope.
 
-↓
+**They can:**
 
-Análise → Aprendizado
+- Write, review, and test code
+- Generate documentation
+- Collect and organize data
+- Produce proposals
 
-↓
+**They cannot:**
 
-Próxima decisão
+- Set the project's direction
+- Approve critical changes
+- Replace human understanding
+- Push relevant changes to production on their own
 
-Camadas de verificação
-Testador 1 — Máquina (testes automatizados)
-Testador 2 — Agente verificador
-Testador 3 — Medição (métricas)
-Testador 4 — Humano (escala de entendimento 0–3)
-Sobre agentes
+---
 
-Os agentes executam dentro do escopo delegado.
+## 💰 Capital Side (Future)
 
-Eles podem:
+The technical lab and the operational (capital) side move together, but at different paces.
 
-Escrever, revisar e testar código
-Gerar documentação
-Coletar e organizar dados
-Produzir propostas
+While the Lab validates methods and quality, the capital side will explore ways to generate revenue at near-zero cost (affiliates, templates, automations, etc.).
 
-Eles não podem:
+Capital exists to provide stability and the conditions to keep the work going. It is not the primary goal.
 
-Definir a direção do projeto
-Aprovar alterações críticas
-Substituir o entendimento humano
-Colocar alterações relevantes em produção sozinhos
-Lado capital (futuro)
+---
 
-O laboratório técnico e o lado operacional (capital) caminham juntos, mas em ritmos diferentes.
+## 🚧 Status
 
-Enquanto o Lab valida métodos e qualidade, o lado capital explorará formas de gerar receita com custo próximo de zero (afiliados, templates, automações, etc.).
+**Under construction.**
 
-O capital serve para dar estabilidade e condições de continuar o trabalho.
+Experiments started in August 2026. The lab is currently moving from initial documentation to comparative experiments with metrics.
 
-Não é o norte principal.
+---
 
-Status
+## 👤 Author
 
-🚧 Em construção
+**Raphael Mendes**
+Rs4Machine | AI Research Lab
 
-Experimentos iniciados em Agosto/2026.
-
-Atualmente, o laboratório está avançando da documentação inicial para experimentos comparativos com métricas.
-
-Autor
-
-Raphael Mendes
-
-RS4 Machine | AI Research Lab
-
-“A tecnologia pode aumentar nossa capacidade.
-Ela não deve substituir nossa responsabilidade.”
+> *"Technology can expand our capability. It should not replace our responsibility."*
