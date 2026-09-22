@@ -1,0 +1,34 @@
+{
+  "experiment_id": "EXP005",
+  "project": "SofiaVoice v2.0",
+  "lead_engineer": "Raphael Mendes",
+  "audit_date": "2026-09-12",
+  "environment": "Production (Render + Vercel)",
+  "metrics": {
+    "v1_baseline": {
+      "stt_whisper_sec": 0.718,
+      "llm_sec": 0.673,
+      "tts_gtts_sec": 4.415,
+      "total_latency_sec": 5.806,
+      "tts_time_percentage": 76.1
+    },
+    "v2_optimized": {
+      "stt_whisper_v3_sec": 0.613,
+      "llm_gpt_oss_20b_sec": 0.412,
+      "tts_edge_neural_sec": 1.850,
+      "total_latency_sec": 2.800,
+      "payload_size_kb": 30.8
+    },
+    "improvements": {
+      "latency_reduction_percent": 51.7,
+      "payload_reduction_percent": 52.2,
+      "tts_speedup_percent": 58.1
+    }
+  },
+  "security_audit": {
+    "payload_limit_mb": 10,
+    "sanitization_xss": true,
+    "cors_restricted": true,
+    "null_audio_guard": true
+  }
+}

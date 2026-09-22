@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "project": "SofiaVoice",
+    "version": "2.0.0",
+    "lab": "Rs4Machine · RS4 Lab · EXP-005",
+    "script": "test_stress_sofia.py",
+    "generated_at": "2026-09-20T17:15:20+00:00",
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config": {
+    "url": "http://localhost:8000",
+    "endpoint": "voice",
+    "total_requests": 5,
+    "concurrency": 1,
+    "interval_s": 0.0,
+    "audio_source": "sintetico",
+    "wav_duration_s": 1.0,
+    "timeouts_s": {
+      "connect": 10,
+      "read": 120
+    }
+  },
+  "totals": {
+    "total_requests": 5,
+    "success": 0,
+    "failed": 5,
+    "error_rate_percent": 100.0,
+    "wall_elapsed_s": 20.4882,
+    "throughput_req_s": 0.244
+  },
+  "latency_total_s": {
+    "all": {
+      "count": 0,
+      "min": null,
+      "avg": null,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "max": null,
+      "stddev": null
+    },
+    "success_only": {
+      "count": 0,
+      "min": null,
+      "avg": null,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "max": null,
+      "stddev": null
+    }
+  },
+  "time_to_first_byte_s": {
+    "count": 0,
+    "min": null,
+    "avg": null,
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null,
+    "stddev": null
+  },
+  "audio_payload_kb": {
+    "count": 0,
+    "mean_kb": null,
+    "total_kb": null
+  },
+  "status_distribution": {
+    "ERR": 5
+  },
+  "slo": {
+    "passed": false,
+    "checks": [
+      {
+        "metric": "p95_latencia_total_s",
+        "limit": 15.0,
+        "value": null,
+        "passed": false
+      },
+      {
+        "metric": "tasa_error_percent",
+        "limit": 5.0,
+        "value": 100.0,
+        "passed": false
+      }
+    ]
+  },
+  "results": [
+    {
+      "request_id": 1,
+      "timestamp": "2026-09-20T17:15:03+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": null,
+      "ok": false,
+      "latency_response_seconds": null,
+      "latency_total_seconds": null,
+      "response_bytes": null,
+      "error": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+      "payload_detail": {}
+    },
+    {
+      "request_id": 2,
+      "timestamp": "2026-09-20T17:15:07+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": null,
+      "ok": false,
+      "latency_response_seconds": null,
+      "latency_total_seconds": null,
+      "response_bytes": null,
+      "error": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+      "payload_detail": {}
+    },
+    {
+      "request_id": 3,
+      "timestamp": "2026-09-20T17:15:11+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": null,
+      "ok": false,
+      "latency_response_seconds": null,
+      "latency_total_seconds": null,
+      "response_bytes": null,
+      "error": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+      "payload_detail": {}
+    },
+    {
+      "request_id": 4,
+      "timestamp": "2026-09-20T17:15:15+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": null,
+      "ok": false,
+      "latency_response_seconds": null,
+      "latency_total_seconds": null,
+      "response_bytes": null,
+      "error": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+      "payload_detail": {}
+    },
+    {
+      "request_id": 5,
+      "timestamp": "2026-09-20T17:15:20+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": null,
+      "ok": false,
+      "latency_response_seconds": null,
+      "latency_total_seconds": null,
+      "response_bytes": null,
+      "error": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+      "payload_detail": {}
+    }
+  ]
+}

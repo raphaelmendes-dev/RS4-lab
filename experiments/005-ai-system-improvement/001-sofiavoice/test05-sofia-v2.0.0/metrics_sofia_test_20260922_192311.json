@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "project": "SofiaVoice",
+    "version": "2.0.0",
+    "lab": "Rs4Machine · RS4 Lab · EXP-005",
+    "script": "test_stress_sofia.py",
+    "generated_at": "2026-09-22T22:23:10+00:00",
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config": {
+    "url": "http://localhost:8000",
+    "endpoint": "voice",
+    "total_requests": 3,
+    "concurrency": 1,
+    "interval_s": 0.0,
+    "audio_source": "sintetico",
+    "wav_duration_s": 1.0,
+    "timeouts_s": {
+      "connect": 10,
+      "read": 120
+    }
+  },
+  "totals": {
+    "total_requests": 3,
+    "success": 3,
+    "failed": 0,
+    "error_rate_percent": 0.0,
+    "wall_elapsed_s": 18.092,
+    "throughput_req_s": 0.166
+  },
+  "latency_total_s": {
+    "all": {
+      "count": 3,
+      "min": 5.5692,
+      "avg": 6.0301,
+      "p50": 5.7838,
+      "p95": 6.642,
+      "p99": 6.7183,
+      "max": 6.7374,
+      "stddev": 0.6218
+    },
+    "success_only": {
+      "count": 3,
+      "min": 5.5692,
+      "avg": 6.0301,
+      "p50": 5.7838,
+      "p95": 6.642,
+      "p99": 6.7183,
+      "max": 6.7374,
+      "stddev": 0.6218
+    }
+  },
+  "time_to_first_byte_s": {
+    "count": 3,
+    "min": 5.5692,
+    "avg": 6.0301,
+    "p50": 5.7837,
+    "p95": 6.6419,
+    "p99": 6.7182,
+    "max": 6.7373,
+    "stddev": 0.6218
+  },
+  "audio_payload_kb": {
+    "count": 3,
+    "mean_kb": 77.95,
+    "total_kb": 233.86
+  },
+  "status_distribution": {
+    "200": 3
+  },
+  "slo": {
+    "passed": true,
+    "checks": [
+      {
+        "metric": "p95_latencia_total_s",
+        "limit": 15.0,
+        "value": 6.64204,
+        "passed": true
+      },
+      {
+        "metric": "tasa_error_percent",
+        "limit": 5.0,
+        "value": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "results": [
+    {
+      "request_id": 1,
+      "timestamp": "2026-09-22T22:22:58+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 5.7837,
+      "latency_total_seconds": 5.7838,
+      "response_bytes": 95301,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "Submarino é uma embarcação que pode se mover na superfície e submergir para operar em profundidade. Ele é usado em missõ",
+        "audio_base64_chars": 95040,
+        "audio_bytes_decoded": 71280
+      }
+    },
+    {
+      "request_id": 2,
+      "timestamp": "2026-09-22T22:23:04+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 5.5692,
+      "latency_total_seconds": 5.5692,
+      "response_bytes": 111088,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "Submarino é um veículo anfíbio que navega debaixo d’água, equipado com sistemas de propulsão, controle de mergulho e, em",
+        "audio_base64_chars": 110784,
+        "audio_bytes_decoded": 83088
+      }
+    },
+    {
+      "request_id": 3,
+      "timestamp": "2026-09-22T22:23:10+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 6.7373,
+      "latency_total_seconds": 6.7374,
+      "response_bytes": 113782,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "Um submarino é um veículo náutico que pode mergulhar e subir na água, servindo a propósitos militares, de pesquisa ou de",
+        "audio_base64_chars": 113472,
+        "audio_bytes_decoded": 85104
+      }
+    }
+  ]
+}
