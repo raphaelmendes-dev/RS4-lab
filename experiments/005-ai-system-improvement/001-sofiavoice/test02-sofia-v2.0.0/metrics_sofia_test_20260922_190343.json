@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "project": "SofiaVoice",
+    "version": "2.0.0",
+    "lab": "Rs4Machine · RS4 Lab · EXP-005",
+    "script": "test_stress_sofia.py",
+    "generated_at": "2026-09-22T22:03:43+00:00",
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config": {
+    "url": "http://localhost:8000",
+    "endpoint": "voice",
+    "total_requests": 3,
+    "concurrency": 1,
+    "interval_s": 0.0,
+    "audio_source": "file:assets/test02-sofia.wav",
+    "wav_duration_s": 1.0,
+    "timeouts_s": {
+      "connect": 10,
+      "read": 120
+    }
+  },
+  "totals": {
+    "total_requests": 3,
+    "success": 3,
+    "failed": 0,
+    "error_rate_percent": 0.0,
+    "wall_elapsed_s": 36.925,
+    "throughput_req_s": 0.081
+  },
+  "latency_total_s": {
+    "all": {
+      "count": 3,
+      "min": 5.2575,
+      "avg": 12.3072,
+      "p50": 6.4565,
+      "p95": 23.3326,
+      "p99": 24.8327,
+      "max": 25.2077,
+      "stddev": 11.1882
+    },
+    "success_only": {
+      "count": 3,
+      "min": 5.2575,
+      "avg": 12.3072,
+      "p50": 6.4565,
+      "p95": 23.3326,
+      "p99": 24.8327,
+      "max": 25.2077,
+      "stddev": 11.1882
+    }
+  },
+  "time_to_first_byte_s": {
+    "count": 3,
+    "min": 5.2575,
+    "avg": 12.3072,
+    "p50": 6.4565,
+    "p95": 23.3326,
+    "p99": 24.8327,
+    "max": 25.2077,
+    "stddev": 11.1882
+  },
+  "audio_payload_kb": {
+    "count": 2,
+    "mean_kb": 22.92,
+    "total_kb": 45.84
+  },
+  "status_distribution": {
+    "200": 3
+  },
+  "slo": {
+    "passed": false,
+    "checks": [
+      {
+        "metric": "p95_latencia_total_s",
+        "limit": 15.0,
+        "value": 23.332579999999993,
+        "passed": false
+      },
+      {
+        "metric": "tasa_error_percent",
+        "limit": 5.0,
+        "value": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "results": [
+    {
+      "request_id": 1,
+      "timestamp": "2026-09-22T22:03:32+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 25.2077,
+      "latency_total_seconds": 25.2077,
+      "response_bytes": 1270,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Olá, Sofia! Como vai? Qual a previsão do tempo hoje para o estado de São Paulo?",
+        "ai_response": "Desculpe, não tenho acesso a dados climáticos em tempo real. Recomendo conferir um site ou app de meteorologia para a pr",
+        "audio_base64_chars": 960,
+        "audio_bytes_decoded": 720
+      }
+    },
+    {
+      "request_id": 2,
+      "timestamp": "2026-09-22T22:03:37+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 5.2575,
+      "latency_total_seconds": 5.2575,
+      "response_bytes": 148,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Olá, Sofia! Como vai? Qual a previsão do tempo hoje para o estado de São Paulo?",
+        "ai_response": ""
+      }
+    },
+    {
+      "request_id": 3,
+      "timestamp": "2026-09-22T22:03:43+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 6.4565,
+      "latency_total_seconds": 6.4565,
+      "response_bytes": 61890,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Olá, Sofia! Como vai? Qual a previsão do tempo hoje para o estado de São Paulo?",
+        "ai_response": "Desculpe, não tenho acesso a dados em tempo real. Sugiro consultar um site confiável ou aplicativo de clima.",
+        "audio_base64_chars": 61632,
+        "audio_bytes_decoded": 46224
+      }
+    }
+  ]
+}
