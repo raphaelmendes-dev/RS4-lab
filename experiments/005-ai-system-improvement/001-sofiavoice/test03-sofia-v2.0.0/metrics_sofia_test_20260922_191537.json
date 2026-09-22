@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "project": "SofiaVoice",
+    "version": "2.0.0",
+    "lab": "Rs4Machine · RS4 Lab · EXP-005",
+    "script": "test_stress_sofia.py",
+    "generated_at": "2026-09-22T22:15:37+00:00",
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config": {
+    "url": "http://localhost:8000",
+    "endpoint": "voice",
+    "total_requests": 3,
+    "concurrency": 1,
+    "interval_s": 0.0,
+    "audio_source": "sintetico",
+    "wav_duration_s": 1.0,
+    "timeouts_s": {
+      "connect": 10,
+      "read": 120
+    }
+  },
+  "totals": {
+    "total_requests": 3,
+    "success": 3,
+    "failed": 0,
+    "error_rate_percent": 0.0,
+    "wall_elapsed_s": 17.5242,
+    "throughput_req_s": 0.171
+  },
+  "latency_total_s": {
+    "all": {
+      "count": 3,
+      "min": 5.3983,
+      "avg": 5.8409,
+      "p50": 5.7033,
+      "p95": 6.3492,
+      "p99": 6.4066,
+      "max": 6.421,
+      "stddev": 0.525
+    },
+    "success_only": {
+      "count": 3,
+      "min": 5.3983,
+      "avg": 5.8409,
+      "p50": 5.7033,
+      "p95": 6.3492,
+      "p99": 6.4066,
+      "max": 6.421,
+      "stddev": 0.525
+    }
+  },
+  "time_to_first_byte_s": {
+    "count": 3,
+    "min": 5.3983,
+    "avg": 5.8408,
+    "p50": 5.7033,
+    "p95": 6.3491,
+    "p99": 6.4065,
+    "max": 6.4209,
+    "stddev": 0.525
+  },
+  "audio_payload_kb": {
+    "count": 3,
+    "mean_kb": 52.08,
+    "total_kb": 156.23
+  },
+  "status_distribution": {
+    "200": 3
+  },
+  "slo": {
+    "passed": true,
+    "checks": [
+      {
+        "metric": "p95_latencia_total_s",
+        "limit": 15.0,
+        "value": 6.34923,
+        "passed": true
+      },
+      {
+        "metric": "tasa_error_percent",
+        "limit": 5.0,
+        "value": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "results": [
+    {
+      "request_id": 1,
+      "timestamp": "2026-09-22T22:15:25+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 5.3983,
+      "latency_total_seconds": 5.3983,
+      "response_bytes": 29882,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "O que você gostaria de saber sobre submarinos?",
+        "audio_base64_chars": 29760,
+        "audio_bytes_decoded": 22320
+      }
+    },
+    {
+      "request_id": 2,
+      "timestamp": "2026-09-22T22:15:32+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 6.4209,
+      "latency_total_seconds": 6.421,
+      "response_bytes": 92220,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "Submarino é um veículo anfíbio que opera debaixo d’água, usado em pesquisas, exploração ou operações militares. Ele pode",
+        "audio_base64_chars": 91968,
+        "audio_bytes_decoded": 68976
+      }
+    },
+    {
+      "request_id": 3,
+      "timestamp": "2026-09-22T22:15:37+00:00",
+      "endpoint": "voice",
+      "method": "POST",
+      "status_code": 200,
+      "ok": true,
+      "latency_response_seconds": 5.7033,
+      "latency_total_seconds": 5.7033,
+      "response_bytes": 91840,
+      "error": null,
+      "payload_detail": {
+        "user_text": "Submarino",
+        "ai_response": "Um submarino é um veículo anfíbio que opera debaixo d'água, usado em missões militares, científicas e de resgate. Posso ",
+        "audio_base64_chars": 91584,
+        "audio_bytes_decoded": 68688
+      }
+    }
+  ]
+}
