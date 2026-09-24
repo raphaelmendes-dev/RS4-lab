@@ -1,160 +1,162 @@
 # Architecture
 
-## Diagrama
+## Diagram
 
-O diagrama de arquitetura está disponível em:
+The architecture diagram is available at:
 
-```
 docs/architecture.excalidraw
-```
+
 
 ---
 
-## Visão Geral
+## Overview
 
-SofiaVoice é uma aplicação de assistente de voz composta por um backend FastAPI e um frontend Next.js. O backend orquestra um pipeline linear de três serviços independentes — STT, LLM e TTS — que processam áudio de entrada e retornam áudio de saída.
+SofiaVoice is a voice assistant application consisting of a FastAPI backend and a Next.js frontend. The backend orchestrates a linear pipeline of three independent services — STT, LLM, and TTS — that process input audio and return output audio.
 
 **Pipeline:**
 
-```
-ÁUDIO ENTRADA → STT → LLM → TTS → ÁUDIO SAÍDA
-```
+INPUT AUDIO → STT → LLM → TTS → OUTPUT AUDIO
+
 
 ---
 
-## Componentes
+## Components
 
 ### Backend — FastAPI
 
-Ponto de entrada da aplicação. Recebe requisições HTTP do frontend, aciona os serviços em sequência e retorna o resultado.
+Entry point of the application. Handles HTTP requests from the frontend, triggers the services sequentially, and returns the result.
 
-| Atributo | Valor |
+| Attribute | Value |
 |---|---|
 | Framework | FastAPI |
-| Linguagem | Python |
-| Deploy | Railway |
-| Responsabilidade | Orquestração do pipeline STT → LLM → TTS |
+| Language | Python |
+| Deployment | Railway |
+| Responsibility | Pipeline orchestration (STT → LLM → TTS) |
 
-**Estrutura de arquivos:**
+**File structure:**
 
-```
 backend/
 ├── main.py
 ├── routers/
 │   └── voice.py
 └── services/
-    ├── stt.py
-    ├── llm.py
-    └── tts.py
-```
+├── stt.py
+├── llm.py
+└── tts.py
+
 
 ---
 
 ### STT — Speech-to-Text
 
-Recebe o arquivo de áudio enviado pelo frontend e retorna o texto transcrito.
+Receives the audio file sent by the frontend and returns the transcribed text.
 
-| Atributo | Valor |
+| Attribute | Value |
 |---|---|
 | Provider | Groq API |
-| Modelo | Whisper Large V3 |
-| Input | Arquivo de áudio |
-| Output | Texto transcrito |
+| Model | Whisper Large V3 |
+| Input | Audio file |
+| Output | Transcribed text |
 
 ---
 
 ### LLM — Large Language Model
 
-Recebe o texto transcrito pelo STT e retorna a resposta em texto.
+Receives the transcribed text from STT and returns the text response.
 
-| Atributo | Valor |
+| Attribute | Value |
 |---|---|
 | Provider | Groq API |
-| Modelo | openai/gpt-oss-20b |
-| Input | Texto transcrito |
-| Output | Texto da resposta |
+| Model | openai/gpt-oss-20b |
+| Input | Transcribed text |
+| Output | Response text |
 
 ---
 
 ### TTS — Text-to-Speech
 
-Recebe o texto de resposta do LLM e retorna o áudio sintetizado.
+Receives the response text from the LLM and returns the synthesized audio.
 
-| Atributo | Valor |
+| Attribute | Value |
 |---|---|
 | Engine | gTTS |
-| Formato de saída | MP3 |
-| Input | Texto da resposta |
-| Output | Áudio MP3 convertido para Base64 |
+| Output Format | MP3 |
+| Input | Response text |
+| Output | Base64-encoded MP3 audio |
 
 ---
 
 ### Frontend
 
-Responsável pela interação com o usuário: captura o áudio do microfone, envia ao backend e reproduz o áudio de resposta recebido.
+Handles user interaction: captures microphone audio, sends it to the backend, and plays back the received response audio.
 
-| Atributo | Valor |
+| Attribute | Value |
 |---|---|
 | Framework | Next.js |
-| Deploy | Vercel |
-| Responsabilidade | Captura de áudio · Envio ao backend · Reprodução da resposta |
+| Deployment | Vercel |
+| Responsibility | Audio capture · Backend communication · Response playback |
 
-> **Status:** integração frontend ↔ backend ainda não validada ponta a ponta. Pipeline backend testado localmente via Swagger.
-
----
-
-## Fluxo de Dados
-
-```
-1. Frontend captura o áudio do usuário
-2. Frontend envia o áudio ao backend via POST /api/voice
-3. Backend aciona stt.py → texto transcrito
-4. Backend aciona llm.py com o texto → texto de resposta
-5. Backend aciona tts.py com a resposta → áudio MP3 convertido para Base64
-6. Backend retorna JSON ao frontend:
-   {
-     "user_text":    "<texto transcrito>",
-     "ai_response":  "<texto da resposta>",
-     "audio_base64": "<áudio MP3 em Base64>",
-     "format":       "mp3"
-   }
-7. Frontend decodifica o Base64 e reproduz o áudio
-```
-
-> **Status de validação:** o backend e o pipeline `POST /api/voice` foram testados com sucesso localmente via Swagger. A integração completa com o frontend será validada na próxima etapa do projeto.
+> **Status:** End-to-end frontend ↔ backend integration not yet validated. Backend pipeline tested locally via Swagger.
 
 ---
 
-## Stack
+## Data Flow
 
-| Camada | Tecnologia |
+Frontend captures user audio
+
+Frontend sends audio to backend via POST /api/voice
+
+Backend triggers stt.py → transcribed text
+
+Backend triggers llm.py with text → response text
+
+Backend triggers tts.py with response → Base64-encoded MP3 audio
+
+Backend returns JSON to frontend:
+{
+"user_text":    "",
+"ai_response":  "",
+"audio_base64": "",
+"format":       "mp3"
+}
+
+Frontend decodes Base64 and plays audio
+
+
+> **Validation Status:** The backend and `POST /api/voice` pipeline were successfully tested locally via Swagger. Full end-to-end frontend integration will be validated in the next project phase.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
 |---|---|
 | Backend | FastAPI · Python |
 | STT | Groq API · Whisper Large V3 |
 | LLM | Groq API · openai/gpt-oss-20b |
 | TTS | gTTS |
-| Formato de áudio de saída | MP3 |
+| Output Audio Format | MP3 |
 | Frontend | Next.js |
-| Deploy backend | Railway |
-| Deploy frontend | Vercel |
+| Backend Deployment | Railway |
+| Frontend Deployment | Vercel |
 
 ---
 
-## Arquitetura Atual vs. Futuras Melhorias
+## Current Architecture vs. Future Improvements
 
-Esta seção diferencia o que está implementado do que ainda não existe.
+This section distinguishes what is currently implemented from planned features.
 
-### Implementado
+### Implemented
 
-- Pipeline linear STT → LLM → TTS via FastAPI
-- Transcrição com Whisper Large V3 via Groq
-- Geração de resposta com openai/gpt-oss-20b via Groq
-- Síntese de voz com gTTS em MP3
-- Resposta do endpoint em JSON com `user_text`, `ai_response`, `audio_base64` e `format`
-- Pipeline validado localmente via Swagger
-- Frontend Next.js implementado (integração ponta a ponta pendente de validação)
-- Deploy em Railway (backend) e Vercel (frontend)
+- Linear STT → LLM → TTS pipeline via FastAPI
+- Speech transcription using Whisper Large V3 via Groq
+- Response generation using openai/gpt-oss-20b via Groq
+- Voice synthesis using gTTS in MP3 format
+- Endpoint response in JSON containing `user_text`, `ai_response`, `audio_base64`, and `format`
+- Pipeline locally validated via Swagger
+- Next.js frontend implemented (end-to-end integration pending validation)
+- Deployed on Railway (backend) and Vercel (frontend)
 
-### Não implementado (registro para decisões futuras)
+### Not Implemented (Roadmap Log)
 
-> Esta seção deve ser preenchida conforme decisões de roadmap forem tomadas. Nenhuma melhoria foi documentada no texto de origem.
+> This section will be updated as roadmap decisions are made. No improvements were documented in the source text.

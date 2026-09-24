@@ -1,15 +1,14 @@
 # Experiment 002 — Pipeline Validation
 
-## Data
+## Date
 
 21/08/2026
 
-## Objetivo
+## Objective
 
-Validar o funcionamento do pipeline de voz da SofiaVoice em ambiente local,
-desde a entrada de áudio até a geração da resposta e do áudio de saída.
+Validate the operation of SofiaVoice's audio pipeline in a local environment, from audio input to response generation and output audio.
 
-## Ambiente
+## Environment
 
 - Python 3.14.2
 - FastAPI
@@ -19,66 +18,60 @@ desde a entrada de áudio até a geração da resposta e do áudio de saída.
 - openai/gpt-oss-20b
 - gTTS
 
-## Procedimento
+## Procedure
 
-1. Reconstrução do ambiente virtual do backend.
-2. Instalação das dependências.
-3. Configuração da variável `GROQ_API_KEY`.
-4. Inicialização do servidor FastAPI.
-5. Validação do endpoint `/health`.
-6. Testes individuais de `/api/chat` e `/api/speak`.
-7. Teste do pipeline completo através de `/api/voice`.
+1. Rebuilt the backend virtual environment.
+2. Installed dependencies.
+3. Configured the `GROQ_API_KEY` environment variable.
+4. Initialized the FastAPI server.
+5. Validated the `/health` endpoint.
+6. Ran individual tests on `/api/chat` and `/api/speak`.
+7. Tested the end-to-end pipeline via `/api/voice`.
 
-## Problema Encontrado
+## Issue Encountered
 
-O modelo anteriormente configurado:
+The previously configured model:
 
 `llama-3.3-70b-versatile`
 
-retornou erro `model_not_found`.
+returned a `model_not_found` error.
 
-A disponibilidade de modelos foi consultada diretamente através da API da
-Groq.
+Model availability was checked directly via the Groq API.
 
-## Alteração
+## Changes Made
 
-O serviço LLM foi atualizado para:
+The LLM service was updated to:
 
 `openai/gpt-oss-20b`
 
-Após a alteração, o endpoint voltou a processar as requisições normalmente.
+Following this change, the endpoint resumed processing requests normally.
 
-## Resultado
+## Results
 
-O pipeline completo foi validado com sucesso.
+The end-to-end pipeline was successfully validated.
 
-Fluxo:
+Flow:
 
-ÁUDIO → STT → LLM → TTS → BASE64
+AUDIO → STT → LLM → TTS → BASE64
 
-O endpoint `/api/voice` retornou HTTP 200 e apresentou:
+The `/api/voice` endpoint returned HTTP 200 and delivered:
 
-- texto transcrito;
-- resposta gerada pelo LLM;
-- áudio MP3 convertido para Base64.
+- Transcribed text;
+- LLM-generated response;
+- Base64-encoded MP3 audio.
 
-## Observações
+## Observations
 
-Durante os testes foram observadas algumas transcrições incorretas e respostas
-vazias em determinados áudios. Testes posteriores com áudio mais claro e
-mais longo produziram resultados consistentes.
+During testing, occasional inaccurate transcriptions and empty responses were observed for certain audio inputs. Subsequent tests with clearer, longer audio clips yielded consistent results.
 
-Isso indica que a qualidade e duração do áudio de entrada podem influenciar
-a estabilidade do STT, mas essa hipótese ainda precisa de testes controlados.
+This suggests that input audio quality and duration may impact STT stability, though this hypothesis requires controlled testing.
 
-## Conclusão
+## Conclusion
 
-O pipeline principal da SofiaVoice está funcional em ambiente local.
+SofiaVoice's primary pipeline is functional in a local environment.
 
-A próxima etapa é validar a integração completa com o frontend e,
-posteriormente, medir latência e identificar possíveis gargalos.
+The next step is to validate full frontend integration, followed by latency benchmarking and bottleneck identification.
 
-## Próximo Experimento
+## Next Experiment
 
-Investigar a integração frontend → backend e estabelecer métricas básicas
-para STT, LLM, TTS e tempo total do pipeline.
+Investigate frontend → backend integration and establish baseline metrics for STT, LLM, TTS, and total pipeline execution time.

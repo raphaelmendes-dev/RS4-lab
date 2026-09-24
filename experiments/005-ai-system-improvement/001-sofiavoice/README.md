@@ -5,7 +5,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-modular-rs4-machine.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raphaelmendes-dev/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rmendes.dev@outlook.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:python.dev.raphael@gmail.com)
 
 [🇧🇷 Mudar para Português](README.pt-BR.md) · **🇺🇸 English (this file)**
 
@@ -37,6 +37,21 @@ The **RS4 Lab** is Rs4Machine's experimental research lab — a space for contro
 
 ---
 
+## 🧪 EXP005 Experiment Index — SofiaVoice v2.0 Test Runs
+
+Controlled stress runs executed against the `voice` endpoint (`http://localhost:8000`) with `test_stress_sofia.py`.
+
+| Test | Description | SLO Verdict | Report / Artifacts |
+|---|---|---|:---:|---|
+| **test00-sofia-v2.0.0** | v1.0 legacy baseline & v2.0 engineering notes / security audit | — | [`BASELINE.md`](test00-sofia-v2.0.0/BASELINE.md) · [`notes.md`](test00-sofia-v2.0.0/notes.md) |
+| **test01-sofia-v2.0.0** | Stress run — endpoint unreachable (`ConnectionRefusedError`), 100% error rate | ❌ FAIL | [`Result_20260920_141520_EN.md`](test01-sofia-v2.0.0/Result_20260920_141520_EN.md) |
+| **test02-sofia-v2.0.0** | Real audio asset (`assets/test02-sofia.wav`) — 3/3 OK, latency above SLO | ❌ FAIL | [`Result_20260922_190343.md`](test02-sofia-v2.0.0/Result_20260922_190343.md) |
+| **test03-sofia-v2.0.0** | Synthetic audio — 3/3 OK, latency within SLO | ✅ PASS | [`Result_20260922_191537.md`](test03-sofia-v2.0.0/Result_20260922_191537.md) |
+| **test04-sofia-v2.0.0** | Synthetic audio — 3/3 OK, latency within SLO | ✅ PASS | [`Result_20260922_192311.md`](test04-sofia-v2.0.0/Result_20260922_192311.md) |
+| **test05-sofia-v2.0.0** | EXP005 consolidated metrics (production environment audit) | — | [`metrics.json`](test05-sofia-v2.0.0/metrics.json) |
+
+---
+
 ## 🛠️ Stack & Infrastructure
 
 ![Python](https://img.shields.io/badge/Python-3.14.2-3776AB?style=flat&logo=python&logoColor=white)
@@ -51,7 +66,7 @@ The **RS4 Lab** is Rs4Machine's experimental research lab — a space for contro
 
 ## 📬 Contact
 
-📩 [rmendes.dev@outlook.com](mailto:rmendes.dev@outlook.com) ·
+📩 [python.dev.raphael@gmail.com](mailto:python.dev.raphael@gmail.com) ·
 🔗 [LinkedIn](https://www.linkedin.com/in/raphaelmendes-dev/) ·
 🌐 [Portfolio](https://portfolio-modular-rs4-machine.vercel.app/)
 

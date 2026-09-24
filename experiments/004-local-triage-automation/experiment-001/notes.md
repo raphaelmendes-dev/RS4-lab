@@ -2,150 +2,150 @@
 
 ## Notes
 
-### Referência
+### Reference
 
-O baseline humano utilizado neste experimento está registrado separadamente em:
+The human baseline used in this experiment is recorded separately in:
 
 `baseline.md`
 
-A amostra utilizada nas baterias com os modelos é a mesma utilizada no baseline, permitindo comparação posterior sob o mesmo conjunto de documentos.
+The sample used in the model runs is the same one used in the baseline, allowing later comparison under the same document set.
 
 ---
 
-# 27/08/2026 — Primeira bateria
+# 27/08/2026 — First batch
 
-## Modelo
+## Model
 
 `llama3.2:3b`
 
-Primeira bateria experimental com os seis arquivos utilizados no baseline humano.
+First experimental batch with the six files used in the human baseline.
 
-| Arquivo                  | Tempo de leitura | Tempo total | Nota |
-| ------------------------ | ---------------: | ----------: | ---: |
-| etapa1.docx              |          89,05 s |    105,57 s |    2 |
-| INT_ia.docx              |          54,03 s |     63,50 s |    2 |
-| makedown.md              |          61,53 s |    173,48 s |    0 |
-| proposta_maltbot.docx    |           7,20 s |     15,70 s |    2 |
-| resultado.txt            |           9,58 s |     22,18 s |    2 |
-| Como estruturar... .docx |          17,72 s |     32,60 s |    2 |
+| File                     | Read time | Total time | Score |
+| ------------------------ | ---------: | ----------: | ----: |
+| etapa1.docx              |    89.05 s |    105.57 s |     2 |
+| INT_ia.docx              |    54.03 s |     63.50 s |     2 |
+| makedown.md              |    61.53 s |    173.48 s |     0 |
+| proposta_maltbot.docx    |     7.20 s |     15.70 s |     2 |
+| resultado.txt            |     9.58 s |     22.18 s |     2 |
+| Como estruturar... .docx |    17.72 s |     32.60 s |     2 |
 
-### Resultado
+### Result
 
-**Tempo total da bateria:** 413,03 s
+**Total batch time:** 413.03 s
 
-**Tempo médio por arquivo:** 68,84 s
+**Average time per file:** 68.84 s
 
-**Baseline humano:** 30,5 s/arquivo
+**Human baseline:** 30.5 s/file
 
-Qualidade dos resumos:
+Summary quality:
 
-* 5 arquivos receberam nota 2.
-* 1 arquivo recebeu nota 0.
-* Nenhum recebeu nota 3.
+* 5 files scored 2.
+* 1 file scored 0.
+* None scored 3.
 
-### Observações
+### Observations
 
-* O modelo conseguiu produzir resumos considerados adequados em 5 dos 6 arquivos.
-* O arquivo `makedown.md` apresentou falha significativa de aderência à instrução.
-* O documento tinha aproximadamente 300 linhas e o modelo produziu um "resumo" de aproximadamente 202 linhas.
-* Nesse caso, o modelo não apresentou adequadamente os pontos centrais solicitados.
-* Houve grande variação no tempo total entre os arquivos.
-* O modelo respondeu em português.
-* O modelo não possui acesso direto aos arquivos do sistema; o conteúdo precisou ser fornecido ao modelo.
-* Em teste exploratório anterior, quando solicitado a acessar `baseline.md` sem receber seu conteúdo, informou corretamente que não tinha acesso ao arquivo.
-* Em teste exploratório de autoavaliação, produziu uma narrativa sobre sua própria atuação. Essa resposta não foi considerada métrica de desempenho.
+* The model produced summaries considered adequate for 5 of the 6 files.
+* The file `makedown.md` showed a significant failure to adhere to the instruction.
+* The document was approximately 300 lines, and the model produced a "summary" of approximately 202 lines.
+* In that case, the model did not adequately present the requested central points.
+* There was large variation in the total time across files.
+* The model responded in Portuguese.
+* The model has no direct access to the system's files; the content had to be provided to the model.
+* In a prior exploratory test, when asked to access `baseline.md` without receiving its content, it correctly reported that it had no access to the file.
+* In an exploratory self-assessment test, it produced a narrative about its own performance. That response was not considered a performance metric.
 
-### Avaliação
+### Assessment
 
-A primeira bateria indica que o modelo conseguiu produzir resumos úteis em parte dos casos, mas apresentou falha significativa de aderência ao formato solicitado em um dos arquivos.
+The first batch indicates that the model produced useful summaries in part of the cases, but showed a significant failure to adhere to the requested format in one of the files.
 
-Os resultados não permitem concluir que o modelo seja adequado ou inadequado para a automação de triagem.
+The results do not allow concluding that the model is suitable or unsuitable for triage automation.
 
 ---
 
-# 27/08/2026 — Segunda bateria
+# 27/08/2026 — Second batch
 
-## Modelo
+## Model
 
 `qwen2.5:3b`
 
-Segunda bateria experimental utilizando os mesmos seis arquivos, a mesma tarefa e o mesmo protocolo utilizado na bateria anterior.
+Second experimental batch using the same six files, the same task, and the same protocol used in the previous batch.
 
-| Arquivo                  | Tempo de leitura | Tempo total | Nota |
-| ------------------------ | ---------------: | ----------: | ---: |
-| etapa1.docx              |          16,75 s |     20,71 s |    3 |
-| INT_ia.docx              |          45,99 s |     57,81 s |    3 |
-| makedown.md              |          39,46 s |    170,09 s |    1 |
-| proposta_maltbot.docx    |           7,80 s |     12,90 s |    3 |
-| resultado.txt            |           8,54 s |     19,56 s |    3 |
-| Como estruturar... .docx |          17,86 s |     28,95 s |    3 |
+| File                     | Read time | Total time | Score |
+| ------------------------ | ---------: | ----------: | ----: |
+| etapa1.docx              |    16.75 s |     20.71 s |     3 |
+| INT_ia.docx              |    45.99 s |     57.81 s |     3 |
+| makedown.md              |    39.46 s |    170.09 s |     1 |
+| proposta_maltbot.docx    |     7.80 s |     12.90 s |     3 |
+| resultado.txt            |     8.54 s |     19.56 s |     3 |
+| Como estruturar... .docx |    17.86 s |     28.95 s |     3 |
 
-### Resultado
+### Result
 
-**Tempo total da bateria:** 310,02 s
+**Total batch time:** 310.02 s
 
-**Tempo médio por arquivo:** 51,67 s
+**Average time per file:** 51.67 s
 
-**Baseline humano:** 30,5 s/arquivo
+**Human baseline:** 30.5 s/file
 
-Qualidade dos resumos:
+Summary quality:
 
-* 5 arquivos receberam nota 3.
-* 1 arquivo recebeu nota 1.
-* Nenhum recebeu nota 0 ou nota 2.
+* 5 files scored 3.
+* 1 file scored 1.
+* None scored 0 or 2.
 
-**Média de qualidade:** 2,67/3
+**Average quality:** 2.67/3
 
-### Observações
+### Observations
 
-* O modelo apresentou respostas consideradas adequadas em 5 dos 6 arquivos.
-* `etapa1.docx` recebeu nota 3.
-* `INT_ia.docx` recebeu nota 3.
-* `proposta_maltbot.docx` recebeu nota 3. O resumo foi considerado claro, entregou a essência do documento e utilizou 3 linhas.
-* `resultado.txt` recebeu nota 3.
-* `Como estruturar... .docx` recebeu nota 3.
-* O arquivo `makedown.md` apresentou novamente dificuldade em produzir uma explicação simples de um documento grande.
-* No `makedown.md`, o modelo não respeitou o limite de linhas definido no protocolo.
-* O `makedown.md` recebeu nota 1.
-* O tempo de leitura do `makedown.md` foi menor que o observado no Llama 3.2 3B, porém o tempo total permaneceu elevado.
-* O modelo respondeu em português.
+* The model produced responses considered adequate for 5 of the 6 files.
+* `etapa1.docx` scored 3.
+* `INT_ia.docx` scored 3.
+* `proposta_maltbot.docx` scored 3. The summary was considered clear, captured the essence of the document, and used 3 lines.
+* `resultado.txt` scored 3.
+* `Como estruturar... .docx` scored 3.
+* The file `makedown.md` again showed difficulty producing a simple explanation of a large document.
+* In `makedown.md`, the model did not respect the line limit defined in the protocol.
+* The `makedown.md` file scored 1.
+* The `makedown.md` read time was lower than the one observed with Llama 3.2 3B, but the total time remained high.
+* The model responded in Portuguese.
 
-### Avaliação
+### Assessment
 
-A segunda bateria apresentou, nesta amostra, tempo médio inferior ao observado na primeira bateria com o Llama 3.2 3B e notas de qualidade superiores na avaliação humana.
+The second batch showed, in this sample, a lower average time than the one observed in the first batch with the Llama 3.2 3B, and higher quality scores in the human evaluation.
 
-Entretanto, o arquivo `makedown.md` apresentou novamente dificuldade de aderência ao formato solicitado, embora com avaliação superior à observada no Llama 3.2 3B.
+However, the `makedown.md` file again showed difficulty adhering to the requested format, although with a better score than the one observed with the Llama 3.2 3B.
 
-Os resultados desta bateria não permitem concluir que o Qwen 2.5 3B seja superior de forma geral ao Llama 3.2 3B ou que seja adequado para automação de triagem.
+The results of this batch do not allow concluding that the Qwen 2.5 3B is generally superior to the Llama 3.2 3B, or that it is suitable for triage automation.
 
-Os dados deverão ser comparados formalmente utilizando o mesmo protocolo e as mesmas métricas.
-
----
-
-# Observação metodológica
-
-As duas baterias foram realizadas utilizando:
-
-* os mesmos seis arquivos;
-* a mesma tarefa;
-* o mesmo protocolo;
-* avaliação humana da qualidade;
-* separação entre tempo de leitura e tempo total.
-
-O objetivo desta etapa é produzir uma primeira observação comparável entre os modelos.
-
-As medições de tempo desta fase foram realizadas manualmente.
-
-A medição automatizada será implementada posteriormente, após o fechamento e validação das métricas do experimento.
+The data must be compared formally using the same protocol and the same metrics.
 
 ---
 
-# Próximos passos
+# Methodological note
 
-1. Fechar o formato do `metrics.json`.
-2. Registrar no `metrics.json` os dados do baseline, Llama 3.2 3B e Qwen 2.5 3B.
-3. Conferir os cálculos e a consistência dos dados.
-4. Revisar os arquivos antes do versionamento.
-5. Executar `git status`.
-6. Versionar e enviar as alterações ao GitHub.
-7. Posteriormente, implementar a medição automática em Python.
+The two batches were performed using:
+
+* the same six files;
+* the same task;
+* the same protocol;
+* human evaluation of quality;
+* separation between read time and total time.
+
+The objective of this stage is to produce a first comparable observation between the models.
+
+The time measurements of this phase were performed manually.
+
+Automated measurement will be implemented later, after closing and validating the experiment metrics.
+
+---
+
+# Next steps
+
+1. Finalize the `metrics.json` format.
+2. Record the baseline, Llama 3.2 3B, and Qwen 2.5 3B data in `metrics.json`.
+3. Check the calculations and the consistency of the data.
+4. Review the files before versioning.
+5. Run `git status`.
+6. Version and push the changes to GitHub.
+7. Later, implement automated measurement in Python.

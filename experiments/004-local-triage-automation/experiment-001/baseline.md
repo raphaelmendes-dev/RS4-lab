@@ -1,229 +1,229 @@
-# Baseline — Triagem Manual
+# Baseline — Manual Triage
 
-## Objetivo
+## Objective
 
-Registrar como uma tarefa de triagem de arquivos é executada sem auxílio de IA, criando uma referência para comparação com o experimento Agent-Assisted.
+Record how a file-triage task is executed without AI assistance, creating a reference for comparison with the Agent-Assisted experiment.
 
-O baseline representa a condição atual de trabalho humano.
+The baseline represents the current human working condition.
 
 ---
 
-## Regra
+## Rule
 
-A tarefa foi executada sem agente, LLM ou automação de decisão.
+The task was executed without an agent, LLM, or decision automation.
 
-O humano abriu, leu e avaliou cada arquivo individualmente e decidiu se ele deveria ser:
+The human opened, read, and evaluated each file individually and decided whether it should be:
 
-* aprovado;
-* descartado.
+* approved;
+* discarded.
 
-Nenhum arquivo foi excluído permanentemente durante o baseline.
+No file was permanently deleted during the baseline.
 
-Arquivos aprovados foram movidos para:
+Approved files were moved to:
 
 `_APROVADOS`
 
-Arquivos descartados foram movidos para:
+Discarded files were moved to:
 
 `_LIXEIRA_DESKTOP`
 
 ---
 
-## Amostra
+## Sample
 
-Quantidade planejada:
+Planned quantity:
 
-**5 arquivos**
+**5 files**
 
-Quantidade efetivamente executada:
+Quantity actually executed:
 
-**6 arquivos**
+**6 files**
 
-A amostra foi composta por arquivos reais do acervo que estava sendo triado.
+The sample consisted of real files from the collection being triaged.
 
-Tipos encontrados na amostra:
+Types found in the sample:
 
 * Word;
 * Markdown;
 * TXT.
 
-A diferença entre a quantidade planejada e executada foi registrada como parte do experimento, sem repetição da medição.
+The difference between the planned and executed quantity was recorded as part of the experiment, without repeating the measurement.
 
 ---
 
-## Procedimento
+## Procedure
 
-Para cada arquivo:
+For each file:
 
-1. Registrar o início da análise.
-2. Abrir e ler o conteúdo necessário para compreender o arquivo.
-3. Decidir se o arquivo seria aprovado ou descartado.
-4. Registrar o tempo gasto na análise.
-5. Registrar a decisão.
-6. Mover o arquivo para o destino correspondente.
-7. Registrar observações relevantes.
-
----
-
-## Resultado observado
-
-### Arquivo 1
-
-**Arquivo:** `etapa1..doc/.docx`
-**Tempo:** 30 s
-**Decisão:** S — Aprovado
-**Destino:** `_APROVADOS`
-**Conteúdo/observação:** Bot WhatsApp com n8n.
-
-### Arquivo 2
-
-**Arquivo:** `INT_ia.doc/.docx`
-**Tempo:** 54 s
-**Decisão:** S — Aprovado
-**Destino:** `_APROVADOS`
-**Conteúdo/observação:** MetaPrompt + estratégia para perfil técnico.
-
-### Arquivo 3
-
-**Arquivo:** `makedown.md`
-**Tempo:** 19 s
-**Decisão:** S — Aprovado
-**Destino:** `_APROVADOS`
-**Conteúdo/observação:** Projeto de simulação da faculdade UNIVESP sobre IA, referente ao primeiro semestre.
-
-### Arquivo 4
-
-**Arquivo:** `proposta_maltbot .doc/.docx`
-**Tempo:** 13 s
-**Decisão:** N — Não aprovado
-**Destino:** `_LIXEIRA_DESKTOP`
-**Conteúdo/observação:** Projeto de chatbot com IA e n8n relacionado a trabalho freelance.
-
-### Arquivo 5
-
-**Arquivo:** `resultado.txt`
-**Tempo:** 24 s
-**Decisão:** N — Não aprovado
-**Destino:** `_LIXEIRA_DESKTOP`
-**Conteúdo/observação:** Possíveis ferramentas gratuitas.
-
-### Arquivo 6
-
-**Arquivo:** `Como estruturar... ..doc/.docx`
-**Tempo:** 43 s
-**Decisão:** S — Aprovado
-**Destino:** `_APROVADOS`
-**Conteúdo/observação:** Documento relacionado à questão "para que vários templates?".
+1. Record the start of the analysis.
+2. Open and read the content necessary to understand the file.
+3. Decide whether the file would be approved or discarded.
+4. Record the time spent on the analysis.
+5. Record the decision.
+6. Move the file to the corresponding destination.
+7. Record relevant observations.
 
 ---
 
-## Dados consolidados
+## Observed result
 
-| Métrica                 |  Resultado |
-| ----------------------- | ---------: |
-| Arquivos planejados     |          5 |
-| Arquivos processados    |          6 |
-| Aprovados               |          4 |
-| Não aprovados           |          2 |
-| Tempo total             |      183 s |
-| Tempo total             | 3 min 03 s |
-| Tempo médio por arquivo |     30,5 s |
+### File 1
 
-### Distribuição
+**File:** `etapa1..doc/.docx`
+**Time:** 30 s
+**Decision:** S — Approved
+**Destination:** `_APROVADOS`
+**Content/observation:** WhatsApp bot with n8n.
 
-**Aprovados:** 4 de 6 — 66,7%
+### File 2
 
-**Não aprovados:** 2 de 6 — 33,3%
+**File:** `INT_ia.doc/.docx`
+**Time:** 54 s
+**Decision:** S — Approved
+**Destination:** `_APROVADOS`
+**Content/observation:** MetaPrompt + strategy for a technical profile.
 
----
+### File 3
 
-## Observação sobre o tempo
+**File:** `makedown.md`
+**Time:** 19 s
+**Decision:** S — Approved
+**Destination:** `_APROVADOS`
+**Content/observation:** UNIVESP university simulation project on AI, referring to the first semester.
 
-O tempo de análise variou entre:
+### File 4
 
-**13 s e 54 s por arquivo.**
+**File:** `proposta_maltbot .doc/.docx`
+**Time:** 13 s
+**Decision:** N — Not approved
+**Destination:** `_LIXEIRA_DESKTOP`
+**Content/observation:** AI + n8n chatbot project related to freelance work.
 
-A variação indica que o esforço de triagem não foi uniforme entre os documentos.
+### File 5
 
-O arquivo `INT_ia..doc/.docx` apresentou o maior tempo de análise, com **54 segundos**.
+**File:** `resultado.txt`
+**Time:** 24 s
+**Decision:** N — Not approved
+**Destination:** `_LIXEIRA_DESKTOP`
+**Content/observation:** Possible free tools.
 
-O arquivo `proposta_maltbot..doc/.docx` apresentou o menor tempo de análise, com **13 segundos**.
+### File 6
 
-Essa variação será considerada posteriormente na comparação com a triagem assistida por IA.
-
----
-
-## Métricas do Baseline
-
-### 1. Tempo por arquivo
-
-Tempo decorrido durante a análise humana de cada arquivo.
-
-Resultado observado:
-
-**30,5 s/arquivo em média**
-
-### 2. Tempo total
-
-Tempo necessário para concluir a análise da amostra:
-
-**183 segundos / 3 min 03 s**
-
-### 3. Volume processado
-
-**6 arquivos**
-
-### 4. Distribuição das decisões
-
-* Aprovados: **4**
-* Não aprovados: **2**
-
-### 5. Erros ou dificuldades
-
-Nenhum erro técnico ou falha de movimentação foi registrado durante a execução do baseline.
+**File:** `Como estruturar... ..doc/.docx`
+**Time:** 43 s
+**Decision:** S — Approved
+**Destination:** `_APROVADOS`
+**Content/observation:** Document related to the question "why multiple templates?".
 
 ---
 
-## Controle dos arquivos
+## Consolidated data
 
-Os seis arquivos foram efetivamente movimentados após a decisão humana.
+| Metric                  | Result |
+| ----------------------- | ------: |
+| Planned files           |       5 |
+| Processed files         |       6 |
+| Approved                |       4 |
+| Not approved            |       2 |
+| Total time              |   183 s |
+| Total time              | 3 min 03 s |
+| Average time per file   | 30.5 s  |
 
-Destino dos aprovados:
+### Distribution
+
+**Approved:** 4 of 6 — 66.7%
+
+**Not approved:** 2 of 6 — 33.3%
+
+---
+
+## Observation on time
+
+The analysis time varied between:
+
+**13 s and 54 s per file.**
+
+The variation indicates that the triage effort was not uniform across documents.
+
+The file `INT_ia..doc/.docx` presented the longest analysis time, at **54 seconds**.
+
+The file `proposta_maltbot..doc/.docx` presented the shortest analysis time, at **13 seconds**.
+
+This variation will be considered later in the comparison with AI-assisted triage.
+
+---
+
+## Baseline metrics
+
+### 1. Time per file
+
+Elapsed time during the human analysis of each file.
+
+Observed result:
+
+**30.5 s/file on average**
+
+### 2. Total time
+
+Time required to complete the sample analysis:
+
+**183 seconds / 3 min 03 s**
+
+### 3. Processed volume
+
+**6 files**
+
+### 4. Decision distribution
+
+* Approved: **4**
+* Not approved: **2**
+
+### 5. Errors or difficulties
+
+No technical error or movement failure was recorded during the baseline execution.
+
+---
+
+## File control
+
+The six files were effectively moved after the human decision.
+
+Destination of approved files:
 
 `_APROVADOS`
 
-Destino dos não aprovados:
+Destination of not-approved files:
 
 `_LIXEIRA_DESKTOP`
 
-Nenhum arquivo foi excluído permanentemente.
+No file was permanently deleted.
 
 ---
 
-## Interpretação
+## Interpretation
 
-O baseline estabelece uma referência inicial para a triagem manual.
+The baseline establishes an initial reference for manual triage.
 
-Na condição observada, Raphael levou em média **30,5 segundos por arquivo** para analisar e decidir sobre a amostra de seis arquivos.
+In the observed condition, Raphael took on average **30.5 seconds per file** to analyze and decide on the six-file sample.
 
-Esse resultado não representa uma meta nem uma conclusão sobre eficiência.
+This result does not represent a target nor a conclusion about efficiency.
 
-Ele será utilizado posteriormente para comparação com a triagem assistida por IA.
+It will be used later for comparison with AI-assisted triage.
 
-A decisão humana permanece como referência de controle do experimento.
+The human decision remains the experiment's control reference.
 
 ---
 
-## Pergunta para o próximo estágio
+## Question for the next stage
 
-> A utilização de um modelo local pode reduzir o tempo necessário para compreender e triar os arquivos, mantendo a decisão e a autorização da movimentação exclusivamente sob controle humano?
+> Can the use of a local model reduce the time required to understand and triage files, while keeping the decision and the authorization for file movement exclusively under human control?
 
 ---
 
 ## Status
 
-**CONCLUÍDO — BASELINE EXECUTADO**
+**COMPLETED — BASELINE EXECUTED**
 
-Próximo passo:
+Next step:
 
-**Definir a especificação operacional do Experiment-001 do Local Triage Automation antes da implementação.**
+**Define the operational specification of Experiment-001 of Local Triage Automation before implementation.**

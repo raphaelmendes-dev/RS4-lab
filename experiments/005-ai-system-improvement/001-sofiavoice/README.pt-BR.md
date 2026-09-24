@@ -5,7 +5,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-modular-rs4-machine.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raphaelmendes-dev/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rmendes.dev@outlook.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:python.dev.raphael@gmail.com)
 
 **🇧🇷 Português (este arquivo)** · [🇺🇸 Switch to English](README.md)
 
@@ -51,7 +51,7 @@ O **RS4 Lab** é o laboratório de pesquisa experimental da **Rs4Machine** — u
 
 ## 📬 Contato
 
-📩 [rmendes.dev@outlook.com](mailto:rmendes.dev@outlook.com) ·
+📩 [python.dev.raphael@gmail.com](mailto:python.dev.raphael@gmail.com) ·
 🔗 [LinkedIn](https://www.linkedin.com/in/raphaelmendes-dev/) ·
 🌐 [Portfolio](https://portfolio-modular-rs4-machine.vercel.app/)
 

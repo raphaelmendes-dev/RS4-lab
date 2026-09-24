@@ -1,63 +1,63 @@
-# Notas — Experiment-003 — Agent-Assisted
+# Notes — Experiment-003 — Agent-Assisted
 
-## Primeira execução
+## Initial Run
 
-O primeiro agente de código utilizado no experimento Agent-Assisted foi o Cline, utilizando o modelo DeepSeek V4 Flash.
+The first coding agent used in the Agent-Assisted experiment was Cline, powered by the DeepSeek V4 Flash model.
 
-A tarefa escolhida foi deliberadamente pequena e controlada: criar um módulo Python capaz de calcular a média, o menor e o maior valor de uma coleção de números.
+The selected task was deliberately small and controlled: creating a Python module capable of calculating the mean, minimum, and maximum values of a collection of numbers.
 
-A escolha de uma tarefa simples teve como objetivo reduzir a complexidade do experimento e permitir a observação do comportamento do agente em uma situação facilmente verificável.
+Choosing a simple task aimed to reduce experimental complexity and allow direct observation of the agent's behavior in an easily verifiable scenario.
 
-Antes da execução, o agente foi instruído a apresentar um plano e recebeu limites explícitos de escopo.
+Prior to execution, the agent was instructed to present a plan and was provided with explicit scope boundaries.
 
-### Execução observada
+### Observed Execution
 
-Durante a execução, o agente:
+During execution, the agent:
 
-* criou o diretório específico do experimento;
-* criou `stats.py`;
-* criou `test_stats.py`;
-* criou `README.md`;
-* executou testes automatizados;
-* realizou uma demonstração prática;
-* verificou entradas inválidas;
-* não instalou dependências;
-* não utilizou serviços externos;
-* não realizou commits.
+* Created the specific directory for the experiment;
+* Created `stats.py`;
+* Created `test_stats.py`;
+* Created `README.md`;
+* Executed automated tests;
+* Ran a practical demonstration;
+* Verified invalid inputs;
+* Did not install external dependencies;
+* Did not use external services;
+* Did not perform any commits.
 
-### Intervenção humana
+### Human Intervention
 
-Durante a execução, o agente tentou utilizar `&&` em um comando destinado ao PowerShell.
+During execution, the agent attempted to use `&&` within a command intended for PowerShell.
 
-O comando não era adequado ao ambiente utilizado. O problema foi identificado durante a execução e o agente adaptou o comando para `;`.
+The command syntax was incompatible with the active shell environment. The issue was identified during execution, and the agent adapted the command to use `;`.
 
-A ocorrência foi registrada como uma intervenção de ambiente, não como falha na lógica do código produzido.
+This event was recorded as an environment-related intervention rather than a logic failure in the generated code.
 
-### Observações
+### Observations
 
-O agente apresentou comportamento compatível com a hipótese inicial do experimento: atuar como operador dentro de um escopo previamente definido, executando tarefas e aguardando orientação quando necessário.
+The agent exhibited behavior consistent with the initial hypothesis of the experiment: acting as an operator within a pre-defined scope, executing tasks, and awaiting guidance when necessary.
 
-A tarefa também permitiu observar que a supervisão humana continua relevante mesmo em atividades de baixo risco, especialmente para decisões relacionadas ao ambiente, escopo e validação do resultado.
+The task also highlighted that human supervision remains relevant even in low-risk activities, particularly regarding environment decisions, scope management, and validation of results.
 
-O objetivo desta primeira execução não era produzir um componente sofisticado, mas estabelecer uma situação pequena, controlada e verificável para observar:
+The objective of this initial run was not to produce a sophisticated component, but rather to establish a small, controlled, and verifiable setup to observe:
 
-* capacidade de execução;
-* necessidade de intervenção humana;
-* comportamento diante de erros;
-* qualidade do resultado;
-* capacidade de seguir restrições;
-* relação entre autonomia e supervisão.
+* Execution capability;
+* Necessity of human intervention;
+* Behavior when encountering errors;
+* Quality of output;
+* Ability to follow constraints;
+* Relationship between autonomy and supervision.
 
-### Relação com as métricas
+### Connection to Metrics
 
-Os dados quantitativos desta execução devem ser registrados separadamente na estrutura `metrics/benchmarks/`.
+Quantitative data from this execution should be recorded separately in the `metrics/benchmarks/` structure.
 
-Este arquivo registra principalmente observações qualitativas e acontecimentos relevantes durante o experimento.
+This file primarily records qualitative observations and relevant events during the experiment.
 
-### Resultado inicial
+### Baseline Result
 
-Esta execução servirá como referência inicial para os próximos experimentos Agent-Assisted.
+This execution will serve as an initial baseline for future Agent-Assisted experiments.
 
-Os resultados não devem ser utilizados isoladamente para concluir que agentes são superiores à execução manual. A comparação deverá considerar tempo, qualidade, erros, retrabalho, necessidade de intervenção e nível de entendimento do operador.
+Results should not be viewed in isolation to conclude that agents are superior to manual execution. Comparative analysis must account for time, quality, errors, rework, required intervention, and the operator's level of comprehension.
 
-O objetivo do RS4 é medir o efeito da utilização do agente, e não assumir previamente que sua utilização representa uma melhoria.
+The objective of RS4 is to measure the impact of agent utilization rather than assuming upfront that its adoption represents an improvement.

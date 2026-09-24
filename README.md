@@ -22,7 +22,7 @@
 - [What is RS4 Lab](#-what-is-rs4-lab)
 - [Principles](#-principles)
 - [Current Structure](#️-current-structure)
-- [Experiments](#-experiments)
+- [Lab Experiments Index](#-lab-experiments-index)
 - [Working Model](#-working-model)
 - [Verification Layers](#-verification-layers)
 - [About Agents](#-about-agents)
@@ -59,10 +59,13 @@ Here we log hypotheses, run small experiments, collect evidence, and decide base
 
 ```
 experiments/
-├── 001-architecture-first
+├── 001-architeture-first
 ├── 002-pipeline-validation
 ├── 003-Agent-Assisted
-└── 004-local-triage-automation
+├── 004-local-triage-automation
+├── 005-ai-system-improvement
+│   └── 001-sofiavoice
+└── 006-cortex-flow
 
 metrics/
 docs/
@@ -72,33 +75,15 @@ Each experiment has its own documentation, evidence, and metrics as needed.
 
 ---
 
-## 🔬 Experiments
+## 🧪 Lab Experiments Index
 
-| # | Name | Status | Started |
+High-level index of the active laboratory experiments. Each entry links only to the **main README** of the experiment; individual test runs and metrics are documented inside each experiment folder.
+
+| # | Experiment | Status | Main README |
 |---|---|---|---|
-| 001 | Architecture First | Completed | Aug/2026 |
-| 002 | Pipeline Validation | Completed | Aug/2026 |
-| 003 | Agent-Assisted Development | Hypothesis under evaluation | 08/22/2026 |
-| 004 | Local Triage Automation | Under experimentation | Aug/2026 |
-
-### Experiment-003 — Agent-Assisted Development
-
-First experiments with agents acting as operators within scoped tasks.
-
-The goal is to observe execution capability, the need for human intervention, output quality, and the relationship between autonomy and supervision.
-
-### Experiment-004 — Local Triage Automation
-
-Experiment focused on evaluating local models on a file-triage task.
-
-The experiment uses a human baseline as a reference and logs time and quality metrics to compare models.
-
-First recorded batch with:
-
-- Llama 3.2 3B
-- Qwen 2.5 3B
-
-Results are still experimental and do not represent a conclusion about automation's superiority.
+| 004 | Local Triage Automation | Under experimentation | [Read experiment](./experiments/004-local-triage-automation/experiment-001/README.md) |
+| 005 | AI System Improvement — SofiaVoice v2.0 | Released | [Read experiment](./experiments/005-ai-system-improvement/001-sofiavoice/README.md) |
+| 006 | Cortex Flow | Under experimentation | [Read experiment](./experiments/006-cortex-flow/README.md) |
 
 ---
 
