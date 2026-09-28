@@ -1,17 +1,16 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/raphaelmendes-dev/sofiavoice/main/assets/Rs4Machine.png" alt="Rs4Machine Logo" width="200" />
 
-
 # 🧪 RS4 Lab
 
-**Laboratório experimental da Rs4Machine**
+**Laboratório de Engenharia de Sistemas de IA · Rs4Machine**
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Em%20constru%C3%A7%C3%A3o-yellow)
 
 **🇧🇷 Português (este arquivo)** · [🇺🇸 English](README.md)
 
-> Experimentar primeiro. Medir. Entender. Só então escalar.
+> Experimentar primeiro. Medir. Compreender. Somente então escalar.
 
 </div>
 
@@ -22,11 +21,10 @@
 - [O que é o RS4 Lab](#-o-que-é-o-rs4-lab)
 - [Princípios](#-princípios)
 - [Estrutura Atual](#-estrutura-atual)
-- [Experimentos](#-experimentos)
+- [Índice de Experimentos](#-índice-de-experimentos)
 - [Modelo de Trabalho](#-modelo-de-trabalho)
 - [Camadas de Verificação](#-camadas-de-verificação)
 - [Sobre Agentes](#-sobre-agentes)
-- [Lado Capital (Futuro)](#-lado-capital-futuro)
 - [Status](#-status)
 - [Autor](#-autor)
 
@@ -34,71 +32,60 @@
 
 ## 🎯 O que é o RS4 Lab
 
-O RS4 Lab é um espaço de experimentação controlada em sistemas inteligentes, agentes de IA e engenharia de software.
+O **RS4 Lab** é o laboratório experimental da **Rs4Machine**. É um ambiente controlado para testar sistemas inteligentes, agentes de IA e métodos de engenharia orientados à produção sob restrições reais.
 
-Não é uma startup.
-Não é um playground de agentes.
-É um laboratório com método.
+Não é uma corrida de startup. Não é um playground de agentes sem limites. É um laboratório com método.
 
-Aqui registramos hipóteses, executamos experimentos pequenos, coletamos evidências e decidimos com base em dados — mantendo o humano como decisor final.
+O objetivo é validar hipóteses com evidência, medir o comportamento real e manter o humano responsável por decisões críticas.
 
 ---
 
 ## 🧭 Princípios
 
+> Experimentar primeiro. Medir. Compreender. Somente então escalar.
+
+- Um humano permanece como decisor final em toda chamada crítica.
+- Todo sistema autônomo precisa de uma forma clara e rápida de ser interrompido.
+- Decisões guiadas por métricas, não por intuição.
+
 1. O humano permanece como decisor final e responsável pelo resultado.
-2. Todo sistema autônomo deve ter forma clara, rápida e documentada de ser interrompido.
+2. Todo sistema autônomo deve ter uma forma clara, rápida e documentada de ser interrompido.
 3. Decisões críticas nunca são delegadas completamente a agentes.
-4. O entendimento e a capacidade de depurar não podem ser terceirizados.
+4. Compreensão e capacidade de depuração não podem ser terceirizadas.
 5. Planos de contingência fazem parte do método, não são opcionais.
-6. Quanto maior o impacto potencial da tarefa, maior deve ser o nível de supervisão e restrição.
+6. Quanto maior o impacto potencial de uma tarefa, maior deve ser o nível de supervisão e restrição.
 
 ---
 
 ## 🏗️ Estrutura Atual
 
-```
+```text
 experiments/
-├── 001-architecture-first
+├── 001-architeture-first
 ├── 002-pipeline-validation
-├── 003-Agent-Assisted
-└── 004-local-triage-automation
-
+├── 003-agent-assisted
+├── 004-local-triage-automation
+├── 005-ai-system-improvement
+│   └── 001-sofiavoice
+├── 006-cortex-flow
+│
 metrics/
 docs/
 ```
 
-Cada experimento possui sua própria documentação, evidências e métricas conforme a necessidade.
+Cada experimento documenta sua hipótese, evidência e critérios de avaliação conforme a necessidade.
 
 ---
 
-## 🔬 Experimentos
+## 🧪 Índice de Experimentos
 
-| # | Nome | Status | Início |
+Índice geral dos experimentos ativos do laboratório. Cada entrada aponta apenas para o README principal do experimento; métricas detalhadas e notas de execução ficam dentro da pasta de cada experimento.
+
+| # | Experimento | Status | README principal |
 |---|---|---|---|
-| 001 | Architecture First | Concluído | Ago/2026 |
-| 002 | Pipeline Validation | Concluído | Ago/2026 |
-| 003 | Agent-Assisted Development | Hipótese em avaliação | 22/08/2026 |
-| 004 | Local Triage Automation | Em experimentação | Ago/2026 |
-
-### Experiment-003 — Agent-Assisted Development
-
-Primeiros experimentos com agentes atuando como operadores dentro de tarefas delimitadas.
-
-O objetivo é observar capacidade de execução, necessidade de intervenção humana, qualidade do resultado e relação entre autonomia e supervisão.
-
-### Experiment-004 — Local Triage Automation
-
-Experimento voltado à avaliação de modelos locais em uma tarefa de triagem de arquivos.
-
-O experimento utiliza um baseline humano como referência e registra métricas de tempo e qualidade para comparação entre modelos.
-
-Primeira bateria registrada com:
-
-- Llama 3.2 3B
-- Qwen 2.5 3B
-
-Os resultados ainda são experimentais e não representam uma conclusão sobre superioridade da automação.
+| 004 | Local Triage Automation | Em experimentação | [Ler experimento](./experiments/004-local-triage-automation/experiment-001/README.md) |
+| 005 | AI System Improvement — SofiaVoice v2.0 | Publicado | [Ler experimento](./experiments/005-ai-system-improvement/001-sofiavoice/README.md) |
+| 006 | Cortex Flow | Em experimentação | [Ler experimento](./experiments/006-cortex-flow/README.md) |
 
 ---
 
@@ -145,17 +132,7 @@ Os agentes executam dentro do escopo delegado.
 - Definir a direção do projeto
 - Aprovar alterações críticas
 - Substituir o entendimento humano
-- Colocar alterações relevantes em produção sozinhos
-
----
-
-## 💰 Lado Capital (Futuro)
-
-O laboratório técnico e o lado operacional (capital) caminham juntos, mas em ritmos diferentes.
-
-Enquanto o Lab valida métodos e qualidade, o lado capital explorará formas de gerar receita com custo próximo de zero (afiliados, templates, automações, etc.).
-
-O capital serve para dar estabilidade e condições de continuar o trabalho. Não é o norte principal.
+- Publicar alterações relevantes em produção sozinhos
 
 ---
 
@@ -163,13 +140,15 @@ O capital serve para dar estabilidade e condições de continuar o trabalho. Nã
 
 **Em construção.**
 
-Experimentos iniciados em Agosto/2026. Atualmente, o laboratório está avançando da documentação inicial para experimentos comparativos com métricas.
+Os experimentos iniciaram em agosto de 2026. O laboratório está avançando da documentação inicial para experimentos comparativos com métricas e evidências rastreáveis.
 
 ---
 
 ## 👤 Autor
 
 **Raphael Mendes**
-Rs4Machine | AI Research Lab
 
-> *"A tecnologia pode aumentar nossa capacidade. Ela não deve substituir nossa responsabilidade."*
+**AI Systems Engineer & Founder · Rs4Machine**
+
+> "A tecnologia pode ampliar nossa capacidade. Ela não deve substituir nossa responsabilidade."
+

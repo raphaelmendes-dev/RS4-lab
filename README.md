@@ -1,10 +1,9 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/raphaelmendes-dev/sofiavoice/main/assets/Rs4Machine.png" alt="Rs4Machine Logo" width="200" />
 
-
 # 🧪 RS4 Lab
 
-**Rs4Machine's Experimental Lab**
+**AI Systems Engineering Laboratory · Rs4Machine**
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Under%20construction-yellow)
@@ -26,7 +25,6 @@
 - [Working Model](#-working-model)
 - [Verification Layers](#-verification-layers)
 - [About Agents](#-about-agents)
-- [Capital Side (Future)](#-capital-side-future)
 - [Status](#-status)
 - [Author](#-author)
 
@@ -34,17 +32,21 @@
 
 ## 🎯 What is RS4 Lab
 
-RS4 Lab is a space for controlled experimentation in intelligent systems, AI agents, and software engineering.
+**RS4 Lab** is the experimental laboratory of **Rs4Machine**. It is a controlled environment for testing intelligent systems, AI agents, and production-oriented engineering methods under real constraints.
 
-It's not a startup.
-It's not an agent playground.
-It's a lab with a method.
+This is not a startup sprint. It is not an unconstrained agent playground. It is a lab with a method.
 
-Here we log hypotheses, run small experiments, collect evidence, and decide based on data — always keeping a human as the final decision-maker.
+The goal is to validate assumptions with evidence, measure real behavior, and keep the human accountable for critical decisions.
 
 ---
 
 ## 🧭 Principles
+
+> Experiment first. Measure. Understand. Only then scale.
+
+- A human remains the final decision-maker on every critical call.
+- Every autonomous system needs a clear, fast way to be interrupted.
+- Decisions driven by metrics, not intuition.
 
 1. A human remains the final decision-maker and is accountable for the outcome.
 2. Every autonomous system must have a clear, fast, and documented way to be interrupted.
@@ -57,27 +59,27 @@ Here we log hypotheses, run small experiments, collect evidence, and decide base
 
 ## 🏗️ Current Structure
 
-```
+```text
 experiments/
 ├── 001-architeture-first
 ├── 002-pipeline-validation
-├── 003-Agent-Assisted
+├── 003-agent-assisted
 ├── 004-local-triage-automation
 ├── 005-ai-system-improvement
 │   └── 001-sofiavoice
-└── 006-cortex-flow
-
+├── 006-cortex-flow
+│
 metrics/
 docs/
 ```
 
-Each experiment has its own documentation, evidence, and metrics as needed.
+Each experiment documents its own hypothesis, evidence, and evaluation criteria as needed.
 
 ---
 
 ## 🧪 Lab Experiments Index
 
-High-level index of the active laboratory experiments. Each entry links only to the **main README** of the experiment; individual test runs and metrics are documented inside each experiment folder.
+High-level index of the active laboratory experiments. Each entry links only to the main README of the experiment; detailed metrics and run-level notes remain inside each experiment folder.
 
 | # | Experiment | Status | Main README |
 |---|---|---|---|
@@ -134,27 +136,19 @@ Agents execute within their delegated scope.
 
 ---
 
-## 💰 Capital Side (Future)
-
-The technical lab and the operational (capital) side move together, but at different paces.
-
-While the Lab validates methods and quality, the capital side will explore ways to generate revenue at near-zero cost (affiliates, templates, automations, etc.).
-
-Capital exists to provide stability and the conditions to keep the work going. It is not the primary goal.
-
----
-
 ## 🚧 Status
 
 **Under construction.**
 
-Experiments started in August 2026. The lab is currently moving from initial documentation to comparative experiments with metrics.
+Experiments started in August 2026. The lab is currently moving from initial documentation to comparative experiments with metrics and traceable evidence.
 
 ---
 
 ## 👤 Author
 
 **Raphael Mendes**
-Rs4Machine | AI Research Lab
 
-> *"Technology can expand our capability. It should not replace our responsibility."*
+**AI Systems Engineer & Founder · Rs4Machine**
+
+> "Technology can expand our capability. It should not replace our responsibility."
+
