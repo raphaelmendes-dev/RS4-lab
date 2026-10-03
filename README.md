@@ -3,12 +3,16 @@
 
 # 🧪 RS4 Lab
 
-**Experimental Systems Lab · Rs4Machine**
+**Experimental Systems Laboratory · Rs4Machine**
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active%20experimentation-blue)
 
 > Experiment first. Measure. Understand. Only then scale.
+
+---
+
+**Language:** [🇧🇷 Português](README.pt-BR.md) | **🇺🇸 English (this file)**
 
 </div>
 
@@ -16,16 +20,16 @@
 
 ## What RS4 Lab does today
 
-RS4 Lab is the execution and evidence layer of the Rs4Machine research program. The repository is currently focused on controlled experimentation of AI systems, agent orchestration, latency measurement, and production-oriented validation workflows.
+RS4 Lab is the execution and evidence layer of the Rs4Machine research program. The repository is focused on controlled experimentation of AI systems, agent orchestration, latency measurement, and production-oriented validation.
 
-The active work is not a product delivery sprint; it is a measurement-first lab for validating assumptions under controlled conditions. The current emphasis is on:
+The current work is not a product sprint. It is a measurement-first laboratory for validating assumptions under controlled conditions. The active emphasis is on:
 
 - benchmarking AI and agent pipelines under repeatable conditions;
 - validating end-to-end orchestration under local execution;
 - tracking latency, status, and artifact generation per node or stage;
-- turning experiments into traceable evidence, not intuition-driven decisions.
+- converting experiments into traceable evidence rather than intuition-driven decisions.
 
-The most recent work is concentrated in the `experiments/005-ai-system-improvement` and `experiments/006-cortex-flow` tracks, with a clear move from architecture baseline mapping to multi-agent evaluation and telemetry capture.
+The most recent work is concentrated in `experiments/006-cortex-flow` and `experiments/007-commerce-pipeline`, moving from architecture baseline mapping to multi-agent evaluation and commerce-system integration.
 
 ---
 
@@ -37,10 +41,10 @@ Current signals from the codebase:
 
 - `experiments/005-ai-system-improvement/001-sofiavoice/` documents the SofiaVoice v2.0 release path, including latency benchmark comparisons and execution reports.
 - `experiments/006-cortex-flow/` is the active orchestration experiment. Its v2.0.0 branch includes per-agent metrics, integration tests, and consolidated validation artifacts.
-- The repo structure is organized around experiment folders, not a monolithic application layout.
-- Telemetry is captured as JSON metrics and Markdown reports rather than as a single global processing layer.
+- The repository structure is organized around experiment folders, not a monolithic application layout.
+- Telemetry is captured as JSON metrics and Markdown reports rather than a single global processing layer.
 
-A repo-level `Metrics/` directory is not currently the primary organizational structure; the recent telemetry is stored within the experiment folders themselves, especially under `experiments/006-cortex-flow/v2.0.0/`.
+A repository-level `Metrics/` directory is not currently the primary structure; recent telemetry is stored within the experiment folders themselves, especially under `experiments/006-cortex-flow/v2.0.0/` and `experiments/007-commerce-pipeline/`.
 
 ---
 
@@ -89,7 +93,7 @@ A repo-level `Metrics/` directory is not currently the primary organizational st
 
 ## Metrics and validation suite implemented
 
-The repo currently uses a layered measurement model based on artifacts and evidence, not only execution scripts.
+The repository currently uses a layered measurement model based on artifacts and evidence, not only execution scripts.
 
 ### Measurement model
 
@@ -181,7 +185,7 @@ python -m py_compile \
 pytest experiments/003-Agent-Assisted/
 ```
 
-This repository is primarily organized around experiment scripts and evidence output, so the dominant execution pattern is direct Python invocation of the validation files rather than a single global runner.
+This repository is primarily organized around experiment scripts and evidence output, so the dominant execution pattern is direct Python invocation of the validation files rather than a single global service entry point.
 
 ---
 

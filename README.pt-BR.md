@@ -10,22 +10,26 @@
 
 > Experimentar primeiro. Medir. Compreender. Somente então escalar.
 
+---
+
+**Idioma:** **🇧🇷 Português (este arquivo)** | [🇺🇸 English](README.md)
+
 </div>
 
 ---
 
 ## O que RS4 Lab faz hoje
 
-RS4 Lab é a camada de execução e evidência do programa de pesquisa da Rs4Machine. O repositório está atualmente focado em experimentação controlada de sistemas de IA, orquestração de agentes, medição de latência e workflows de validação orientados à produção.
+RS4 Lab é a camada de execução e evidência do programa de pesquisa da Rs4Machine. O repositório está focado em experimentação controlada de sistemas de IA, orquestração de agentes, medição de latência e validação orientada à produção.
 
-O trabalho ativo não é uma corrida de entrega de produto; é um laboratório prioritário de medição para validar hipóteses sob condições controladas. O foco atual está em:
+O trabalho atual não é uma corrida de produto. É um laboratório orientado por medição para validar hipóteses sob condições controladas. O foco principal é:
 
 - benchmarking de pipelines de IA e agentes sob condições repetíveis;
-- validação de orquestração end-to-end sob execução local;
+- validação de orquestração end-to-end em execução local;
 - rastreamento de latência, status e geração de artefatos por nó ou estágio;
-- transformar experimentos em evidência rastreável, não em decisões guiadas por intuição.
+- conversão de experimentos em evidência rastreável, em vez de decisões guiadas por intuição.
 
-O trabalho mais recente está concentrado nas trilhas `experiments/005-ai-system-improvement` e `experiments/006-cortex-flow`, com um movimento claro de mapeamento de baseline de arquitetura para avaliação de multi-agentes e captura de telemetria.
+O trabalho mais recente está concentrado em `experiments/006-cortex-flow` e `experiments/007-commerce-pipeline`, com avanço do mapeamento de arquitetura para avaliação multi-agente e integração de sistemas de comércio.
 
 ---
 
@@ -36,11 +40,11 @@ O repositório está em uma fase de pesquisa e validação ativa.
 Sinais recentes do código:
 
 - `experiments/005-ai-system-improvement/001-sofiavoice/` documenta o caminho de lançamento do SofiaVoice v2.0, incluindo comparações de benchmark de latência e relatórios de execução.
-- `experiments/006-cortex-flow/` é o experimento de orquestração ativo. Seu ramo v2.0.0 inclui métricas por agente, testes de integração e artefatos de validação consolidados.
+- `experiments/006-cortex-flow/` é o experimento de orquestração ativo. Sua versão v2.0.0 inclui métricas por agente, testes de integração e artefatos de validação consolidados.
 - A estrutura do repositório é organizada em torno de pastas de experimento, não em um layout de aplicação monolítica.
-- A telemetria é capturada como métricas JSON e relatórios Markdown em vez de uma camada de processamento global única.
+- A telemetria é capturada como métricas JSON e relatórios Markdown em vez de uma camada única de processamento global.
 
-Um diretório de `Metrics/` no nível do repositório não é a estrutura organizacional principal atual; a telemetria recente é armazenada dentro das próprias pastas de experimento, especialmente em `experiments/006-cortex-flow/v2.0.0/`.
+Um diretório global de `Metrics/` não é a estrutura organizacional principal atual; a telemetria recente é armazenada dentro das próprias pastas de experimento, especialmente em `experiments/006-cortex-flow/v2.0.0/` e `experiments/007-commerce-pipeline/`.
 
 ---
 
@@ -72,7 +76,7 @@ Um diretório de `Metrics/` no nível do repositório não é a estrutura organi
 │   │       ├── implementation-tests-agents/
 │   │       └── drafts/
 │   └── 007-commerce-pipeline/
-└── docs/ (conforme necessário pelos experimentos)
+└── docs/ (conforme necessidade dos experimentos)
 ```
 
 ### Trilhas principais de experimento
@@ -82,21 +86,21 @@ Um diretório de `Metrics/` no nível do repositório não é a estrutura organi
 - `experiments/003-Agent-Assisted/` — experimentos assistidos por agentes e validação estatística.
 - `experiments/004-local-triage-automation/` — estudos de automação de triagem.
 - `experiments/005-ai-system-improvement/001-sofiavoice/` — benchmarking SofiaVoice, evidência de lançamento e comparações de latência.
-- `experiments/006-cortex-flow/` — experimento de orquestração multi-agente atual com validação rica em telemetria.
-- `experiments/007-commerce-pipeline/` — experimentos de pipeline orientados a comércio e artefatos de resultado.
+- `experiments/006-cortex-flow/` — experimento atual de orquestração multi-agente com validação rica em telemetria.
+- `experiments/007-commerce-pipeline/` — experimentos orientados a comércio e artefatos de resultado.
 
 ---
 
 ## Suíte de métricas e validação implementada
 
-O repositório atualmente usa um modelo de medição em camadas baseado em artefatos e evidência, não apenas scripts de execução.
+O repositório usa um modelo de medição em camadas baseado em artefatos e evidência, e não apenas em scripts de execução.
 
 ### Modelo de medição
 
-- snapshots de métricas JSON por nó;
-- relatórios de integração end-to-end em Markdown;
-- compilação validada de arquivos Python modificados;
-- rastreamento de execução de agente com timestamps e campos de status;
+- snapshots JSON de métricas por nó;
+- relatórios end-to-end em Markdown;
+- validação compilada de arquivos Python alterados;
+- rastreamento da execução de agentes com timestamps e campos de status;
 - verificação em nível de rota para fluxos de orquestração.
 
 ### Padrão de telemetria atual
@@ -104,24 +108,24 @@ O repositório atualmente usa um modelo de medição em camadas baseado em artef
 O experimento mais recente (`experiments/006-cortex-flow/v2.0.0/`) segue este padrão:
 
 - `00-metrics_setup_v2.json` a `13-metrics_triagem_v2.json` — métricas por estágio do fluxo de orquestração;
-- `11-metrics_integracao_v2.json` — resultado de integração end-to-end consolidado;
-- `implementation-tests-agents/` — scripts Python que exercem nós de agentes e o pipeline completo;
-- `drafts/` — avaliações, ofertas, sínteses refinadas e rascunhos de template produzidos durante a execução;
+- `11-metrics_integracao_v2.json` — resultado consolidado de integração end-to-end;
+- `implementation-tests-agents/` — scripts Python que exercitam nós de agentes e o pipeline completo;
+- `drafts/` — rascunhos de avaliação, oferta, síntese refinada e templates produzidos durante a execução;
 - `Result_*.md` e artefatos relacionados em outros experimentos para relatórios de execução.
 
-Este setup fornece rastreabilidade para:
+Isso fornece rastreabilidade para:
 
 - status de execução do nó;
 - latência por estágio;
-- timing total do pipeline;
-- validação de existência e conteúdo de artefato;
-- regressão e comparação entre versões de experimento.
+- tempo total do pipeline;
+- validação de existência e conteúdo do artefato;
+- regressão e comparação entre versões do experimento.
 
 ---
 
 ## Estrutura recente de teste e execução
 
-O trabalho mais recente do Cortex Flow inclui uma suíte de scripts de validação sob:
+O trabalho mais recente do Cortex Flow inclui uma suíte de scripts de validação em:
 
 ```text
 experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/
@@ -136,11 +140,11 @@ experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/
 ├── 09-test_esteira_completa.py
 ```
 
-Estes scripts validam:
+Esses scripts validam:
 
 - execução em nível de nó;
 - sequência de roteamento e transições de estado;
-- validação de sintaxe e compile-time;
+- validação de sintaxe e compilação;
 - integração do pipeline completo;
 - geração e persistência de artefatos de métricas para comparação posterior.
 
@@ -156,7 +160,7 @@ Use a raiz do repositório como diretório de trabalho.
 python experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/09-test_esteira_completa.py
 ```
 
-Isto executa a validação de rota integrada completa, coleta métricas JSON e escreve o relatório de integração consolidado.
+Isto executa a validação completa de rota integrada, coleta métricas JSON e escreve o relatório de integração consolidado.
 
 ### 2) Executar uma variante específica de rota
 
@@ -165,7 +169,7 @@ python experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/09-test_es
 python experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/09-test_esteira_completa.py B
 ```
 
-O script aceita a seleção de rota no workflow de validação e mescla os resultados no mesmo arquivo de métricas sem alterar a lógica de execução principal.
+O script aceita a seleção de rota no fluxo de validação e mescla os resultados no mesmo arquivo de métricas sem alterar a lógica principal de execução.
 
 ### 3) Validar sintaxe e saúde básica do projeto
 
@@ -175,13 +179,13 @@ python -m py_compile \
   experiments/006-cortex-flow/v2.0.0/implementation-tests-agents/02-test_nodo1.py
 ```
 
-### 4) Usar pytest quando a pasta alvo contém verificações no estilo de unidade
+### 4) Usar pytest quando a pasta alvo contiver verificações no estilo unitário
 
 ```bash
 pytest experiments/003-Agent-Assisted/
 ```
 
-Este repositório é primariamente organizado em torno de scripts de experimento e saída de evidência, então o padrão de execução dominante é invocação direta em Python dos arquivos de validação em vez de um único runner global.
+Este repositório é organizado principalmente em torno de scripts de experimento e produção de evidência, então o padrão dominante de execução é a invocação direta em Python dos arquivos de validação, e não um único ponto de entrada de serviço global.
 
 ---
 
@@ -190,7 +194,7 @@ Este repositório é primariamente organizado em torno de scripts de experimento
 RS4 Lab segue uma disciplina experimental rigorosa:
 
 - verificar uma hipótese antes de escalar;
-- manter evidência perto da execução;
+- manter evidência próxima da execução;
 - preferir métricas reproduzíveis a afirmações qualitativas;
 - manter artefatos de teste auditáveis;
 - manter a responsabilidade humana em decisões críticas.
@@ -199,7 +203,7 @@ RS4 Lab segue uma disciplina experimental rigorosa:
 
 ## Status
 
-O projeto está em uma fase experimental ativa focada em medição, validação de orquestração e geração de evidência de agentes.
+O projeto está em fase experimental ativa focada em medição, validação de orquestração e geração de evidência de agentes.
 
 O estado atual do repositório reflete uma transição de documentação de arquitetura para experimentação guiada por métricas, com o material recente mais maduro em:
 
