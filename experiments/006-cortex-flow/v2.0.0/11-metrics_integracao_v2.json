@@ -1,0 +1,264 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Fase 3 — Item 13 — Teste Integrado End-to-End",
+  "regla": "Regla CEO RS4 - Medición Holística",
+  "fecha_hora_execucao": "2026-10-03T00:53:09",
+  "sistema": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "validacion_py_compile": {
+    "arquivos": {
+      "cortex_flow_v2\\graph\\__init__.py": "OK",
+      "cortex_flow_v2\\inbox\\__init__.py": "OK",
+      "cortex_flow_v2\\inbox\\conector_commerce.py": "OK",
+      "cortex_flow_v2\\tests\\test_esteira_completa.py": "OK",
+      "orquestrador_claudio.py": "OK",
+      "cortex_flow_v2\\inbox\\payload_commerce.json": "OK"
+    },
+    "status": "OK"
+  },
+  "travas_hardware": {
+    "pausa_entre_transicoes_s": 2.0,
+    "orquestrador": {
+      "max_tokens_por_requisicao": 1024,
+      "timeout_s_por_requisicao": 240,
+      "esperado": {
+        "max_tokens": 1024,
+        "timeout_s": 240
+      },
+      "status": "OK"
+    }
+  },
+  "conector_commerce": {
+    "payload": "cortex_flow_v2\\inbox\\payload_commerce.json",
+    "oportunidades_pendentes": 2,
+    "ids_pendentes": [
+      "COM-2026-001",
+      "COM-2026-002"
+    ]
+  },
+  "ollama": {
+    "status_http": 200,
+    "versao": "0.35.0",
+    "latencia_s": 2.0534,
+    "online": true
+  },
+  "rotas": {
+    "A": {
+      "rota": "ROTA_A_COPY_OFFER",
+      "oportunidade_id": "COM-2026-001",
+      "oportunidade_titulo": "Campanha de e-mail marketing para a oferta anual",
+      "frente_alvo": "COPY_OFFER",
+      "inicio_iso": "2026-10-03T00:53:11",
+      "fim_iso": "2026-10-03T01:01:13",
+      "duracao_total_s": 481.5565,
+      "pausa_hardware_por_transicao_s": 2.0,
+      "pausa_hardware_total_s": 8.0,
+      "sequencia_esperada": [
+        "triagem",
+        "redator",
+        "critico",
+        "evaluator"
+      ],
+      "sequencia_executada": [
+        "triagem",
+        "redator",
+        "critico",
+        "evaluator"
+      ],
+      "latencias_por_no_ms": [
+        {
+          "no": "triagem",
+          "arquivo": "metrics_triagem_v2.json",
+          "duracao_no_ms": 11.6301,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 00:53:11",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "redator",
+          "arquivo": "metrics_redator_v2.json",
+          "duracao_no_ms": 92728.1452,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 00:53:13",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "critico",
+          "arquivo": "metrics_critico_v2.json",
+          "duracao_no_ms": 171471.3559,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 00:54:48",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "evaluator",
+          "arquivo": "metrics_evaluator_v2.json",
+          "duracao_no_ms": 209296.1785,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 00:57:41",
+          "atualizado_nesta_execucao": true
+        }
+      ],
+      "entregaveis": {
+        "copy_comercial": 920,
+        "caminho_copy_md": 91,
+        "analise_critico": 2344,
+        "parecer_evaluator": 2286,
+        "caminho_avaliacao_md": 97
+      },
+      "nota_preliminar": 3,
+      "recomendacao_hitl": "REVISAR",
+      "caminho_avaliacao_md": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_005741.md",
+      "artefato_hitl": {
+        "caminho": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_005741.md",
+        "existe": true
+      },
+      "erros_estado": [],
+      "falhas": [],
+      "status": "SUCCESS",
+      "exit_code": 0
+    },
+    "B": {
+      "rota": "ROTA_B_BUILDER_TEMPLATE",
+      "oportunidade_id": "COM-2026-002",
+      "oportunidade_titulo": "Template de landing page para freela de portfólio",
+      "frente_alvo": "BUILDER_TEMPLATE",
+      "inicio_iso": "2026-10-03T01:01:13",
+      "fim_iso": "2026-10-03T01:35:05",
+      "duracao_total_s": 2031.8622,
+      "pausa_hardware_por_transicao_s": 2.0,
+      "pausa_hardware_total_s": 14.0,
+      "sequencia_esperada": [
+        "triagem",
+        "mapeador",
+        "techscout",
+        "critico",
+        "sintetizador",
+        "builder",
+        "evaluator"
+      ],
+      "sequencia_executada": [
+        "triagem",
+        "mapeador",
+        "techscout",
+        "critico",
+        "sintetizador",
+        "builder",
+        "evaluator"
+      ],
+      "latencias_por_no_ms": [
+        {
+          "no": "triagem",
+          "arquivo": "metrics_triagem_v2.json",
+          "duracao_no_ms": 0.328,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:01:13",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "mapeador",
+          "arquivo": "metrics_agente1_v2.json",
+          "duracao_no_ms": 100231.9652,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:01:15",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "techscout",
+          "arquivo": "metrics_techscout_v2.json",
+          "duracao_no_ms": 175367.5581,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:02:57",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "critico",
+          "arquivo": "metrics_critico_v2.json",
+          "duracao_no_ms": 357369.8795,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:05:54",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "sintetizador",
+          "arquivo": "metrics_sintetizador_v2.json",
+          "duracao_no_ms": 387355.0405,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:11:54",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "builder",
+          "arquivo": "metrics_builder_v2.json",
+          "duracao_no_ms": 599906.1894,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:18:23",
+          "atualizado_nesta_execucao": true
+        },
+        {
+          "no": "evaluator",
+          "arquivo": "metrics_evaluator_v2.json",
+          "duracao_no_ms": 397559.8047,
+          "estado": "OK",
+          "exit_code": 0,
+          "fecha_hora": "2026-10-03 01:28:25",
+          "atualizado_nesta_execucao": true
+        }
+      ],
+      "entregaveis": {
+        "analise_mapeador": 1221,
+        "analise_techscout": 2235,
+        "analise_critico": 2411,
+        "sintese_final": 2955,
+        "codigo_mvp": 4226,
+        "caminho_template_md": 99,
+        "parecer_evaluator": 2431,
+        "caminho_avaliacao_md": 97
+      },
+      "nota_preliminar": 4,
+      "recomendacao_hitl": "APROVAR",
+      "caminho_avaliacao_md": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_012825.md",
+      "artefato_hitl": {
+        "caminho": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_012825.md",
+        "existe": true
+      },
+      "erros_estado": [],
+      "falhas": [],
+      "status": "SUCCESS",
+      "exit_code": 0
+    }
+  },
+  "resumo": {
+    "rotas_executadas": [
+      "A",
+      "B"
+    ],
+    "rotas_com_sucesso": 2,
+    "rotas_total": 2,
+    "tempo_total_s": 2513.4187,
+    "status": "SUCESSO",
+    "exit_code": 0,
+    "tempo_total_esta_execucao_s": 2515.6665
+  },
+  "png_grafo": {
+    "caminho": "assets\\cortex_flow_v2_graph.png",
+    "existe": true
+  },
+  "artefatos_hitl": {
+    "A": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_005741.md",
+    "B": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_012825.md"
+  }
+}

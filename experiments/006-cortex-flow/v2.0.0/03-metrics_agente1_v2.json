@@ -1,0 +1,98 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Dose 2 (Fase 2) - Nó Agente 1 (Mapeador Estrutural)",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Agente 1: RAG no ChromaDB (coleção 'decisoes') + prompt do Mapeador Estrutural + Ollama local (qwen2.5:7b, fallback qwen2.5:3b).",
+  "fecha_hora": "2026-09-23 12:46:11",
+  "fecha_hora_iso": "2026-09-23T12:46:11",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo": "LAB / GERAL",
+    "entrada_bruta_caracteres": 257,
+    "entrada_bruta_preview": "Ideia: plataforma de micro-saúde laboratorial para clínicas populares em comunidades carentes. Frente Alvo: [X] LAB | [ ] COMMERCE | [ ] GERAL. Objetivo: reduzir custo de exames de rotina com automaçã"
+  },
+  "rag_chromadb": {
+    "coleccion": "decisoes",
+    "query_preview": "Ideia: plataforma de micro-saúde laboratorial para clínicas populares em comunidades carentes. Frente Alvo: [X] LAB | [ ",
+    "n_resultados_requeridos": 3,
+    "total_resultados": 2,
+    "hits": [
+      {
+        "id": "test_nodo1_antecedente_microsaude",
+        "documento": "Decisão anterior: plataforma de micro-saúde para comunidades de baixa renda, focando exames de rotina. Aprendizado: começar por LAB antes de COMMERCE, validando o fluxo de coleta com um piloto.",
+        "metadata": {
+          "probe_test": true,
+          "tipo": "decisao_microsaude",
+          "anio": 2025
+        },
+        "distancia": 0.144834
+      },
+      {
+        "id": "test_nodo1_antecedente_lab",
+        "documento": "Decisão anterior: automação de agendamento para laboratórios de análise clínica em clínicas populares. FATOS: demanda alta por exames de rotina, agendamento manual gera filas. PREMISSAS: integração com laboratórios parceiros é viável. SUPOSIÇÕES: o público-alvo possui acesso a smartphones.",
+        "metadata": {
+          "anio": 2025,
+          "probe_test": true,
+          "tipo": "decisao_lab"
+        },
+        "distancia": 0.181117
+      }
+    ],
+    "latencia_ms": 2964.0956,
+    "status": "OK",
+    "erro": null
+  },
+  "prompt_agente1": {
+    "fonte_regras": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\agentes\\agente1_mapeador.txt",
+    "caracteres_prompt": 1623,
+    "preview": "SYSTEM — AGENTE 1 (MAPEADOR ESTRUTURAL):\nVocê é o AGENTE 1 — Mapeador e Analista Estrutural do RS4-cortex-flow.\nSua função é analisar a ideia bruta fornecida pelo operador humano de forma puramente objetiva.\n\nDIRETRIZES:\n1. Desconstrua o texto bruto em 3 seções claras: FATOS (o que é garantido/decla"
+  },
+  "ollama": {
+    "modelo": "qwen2.5:7b",
+    "status_http": 200,
+    "latencia_ms": 34271.5429,
+    "tokens_prompt": 548,
+    "tokens_resposta": 208,
+    "eval_duration_ms": 31980.95,
+    "done_reason": "stop",
+    "erro": null,
+    "fallback_usado": false,
+    "tentativas": [
+      {
+        "modelo": "qwen2.5:7b",
+        "status_http": 200,
+        "latencia_ms": 34271.5429,
+        "tokens_prompt": 548,
+        "tokens_resposta": 208,
+        "eval_duration_ms": 31980.95,
+        "done_reason": "stop",
+        "erro": null,
+        "fallback_usado": false
+      }
+    ],
+    "url_api_generate": "http://localhost:11434/api/generate",
+    "temperatura": 0.1,
+    "num_predict": 512
+  },
+  "nodo": {
+    "funcao": "nodo_mapeador",
+    "assinatura": "nodo_mapeador(state: CortexState) -> dict",
+    "duracao_total_ms": 37280.3771,
+    "analise_mapeador_caracteres": 713,
+    "analise_mapeador_preview": "ANÁLISE DO AGENTE 1 — Mapeador e Analista Estrutural\n\n**FATOS:**\n- A ideia é desenvolver uma plataforma de micro-saúde laboratorial.\n- O público-alvo são clínicas populares em comunidades carentes.\n- O objetivo é reduzir custos de exames de rotina.\n- A plataforma automatizará o agendamento.\n- A plat",
+    "contexto_rag_total": 2,
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_mapeador": "OK",
+    "nodo_estado": "OK",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "versao": "v3.0",
+  "gerado_em": "2026-09-28T11:44:19",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "host": "DESKTOP-DHI1KTQ"
+  },
+  "codigo": {
+    "compileall": {
+      "status": "ok",
+      "duracao_seg": 0.053,
+      "erros": 0
+    },
+    "testes": {
+      "total": 1,
+      "sucesso": 1,
+      "falhas": 0,
+      "taxa_sucesso_pct": 100.0,
+      "excecoes_total": 0,
+      "taxa_excecoes_pct": 0.0
+    },
+    "detalhes_testes": [
+      {
+        "teste": "test_utils_links.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.053,
+        "excecoes": 0,
+        "resumo_saida": "[OK] py_compile: utils_links.py\n[OK] 1. URL simples da Amazon (?)\n[OK] 2. URL com parâmetros existentes (&)\n[OK] 3. URL com tag existente (substituição)\n[OK] 4. URL de outro domínio (passthrough inalterado)\n[OK] 5. amzn.to short link (passthrough, tag embebida)\n[OK] 6. Shopee (rede extensible -> af_web_id)\n[OK] 7. Mercado Livre (rede extensible -> as)\n[OK] 8. Lomadee (reconhecida sin parámetro -> passthrough)\n[OK] 9. URL com fragmento preservado\n[OK] 10. Host em maiúsculas (normalizado)\n[OK] 11. Idempotência (segunda chamada não duplica a tag)\n[OK] 12. URL vazia / tag vazia -> passthrough\n[OK] 13. detectar_rede (amazon / shopee / desconhecido)\n\n=== TODOS OS TESTES PASSARAM ==="
+      }
+    ]
+  },
+  "desempenho": {
+    "etapas": {
+      "codigo": 0.053
+    },
+    "total_seg": 0.053
+  }
+}

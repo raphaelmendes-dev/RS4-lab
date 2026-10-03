@@ -1,0 +1,40 @@
+{
+  "versao": "v3.0",
+  "gerado_em": "2026-09-28T11:49:19",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "host": "DESKTOP-DHI1KTQ"
+  },
+  "codigo": {
+    "compileall": {
+      "status": "ok",
+      "duracao_seg": 0.07,
+      "erros": 0
+    },
+    "testes": {
+      "total": 1,
+      "sucesso": 1,
+      "falhas": 0,
+      "taxa_sucesso_pct": 100.0,
+      "excecoes_total": 0,
+      "taxa_excecoes_pct": 0.0
+    },
+    "detalhes_testes": [
+      {
+        "teste": "test_exportador_cortex.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.07,
+        "excecoes": 0,
+        "resumo_saida": "============================================================\nRS4 Cortex-Flow V2 — Teste exportador_cortex.py\n============================================================\n[OK] py_compile: exportador_cortex.py\n[OK] B1. Arquivo JSON criado em disco\n[OK] C1. Payload contém todas as 6 chaves obrigatórias\n[OK] C2. 'origem' é str\n[OK] C3. 'timestamp' é str\n[OK] C4. 'tipo_entrada' é str\n[OK] C5. 'titulo' é str\n[OK] C6. 'link_sanitizado' é str\n[OK] C7. 'entrada_bruta' é str\n[OK] C8. 'origem' == 'RS4COMMERCE'\n[OK] C9. 'tipo_entrada' == 'OFERTA_AFILIADO'\n[OK] C10. 'titulo' == título do item\n[OK] C11. 'timestamp' formato ISO-8601 UTC (termina em Z)\n[OK] D1. 'link_sanitizado' contém tag=py4machine-20\n[OK] D2. 'link_sanitizado' preserva psc=1\n[OK] G1. 'entrada_bruta' inicia com 'Frente Alvo: [X] COMMERCE'\n[OK] G2. 'entrada_bruta' segunda linha: 'Tipo: OFERTA_AFILIADO'\n[OK] G3. 'entrada_bruta' contém a descrição do item\n[OK] B2. Payload em disco igual ao retornado pela função\n[OK] D3. Domínio externo: link_sanitizado inalterado (passthrough)\n[OK] D4. tipo_entrada 'OPORTUNIDADE_FREELA' aceito\n[OK] D5. amzn.to short link: link_sanitizado inalterado (passthrough)\n[OK] E1. Diretório criado automaticamente (mkdir -p)\n[OK] F1. ValueError lançado para tipo inválido\n[OK] F2. Arquivo NÃO gravado em caso de tipo inválido\n[OK] H1. Idempotência: segunda gravação produz JSON válido\n[OK] H2. Shopee: link_sanitizado contém af_web_id=py4machine-20\n\n────────────────────────────────────────────────────────────\nJSON de teste gerado (payload_ref):\n────────────────────────────────────────────────────────────\n{\n  \"origem\": \"RS4COMMERCE\",\n  \"timestamp\": \"2026-09-28T14:54:29Z\",\n  \"tipo_entrada\": \"OFERTA_AFILIADO\",\n  \"titulo\": \"Teclado Mecânico Gamer XYZ\",\n  \"link_sanitizado\": \"https://www.amazon.com.br/dp/B0ABC123456?psc=1&tag=py4machine-20\",\n  \"entrada_bruta\": \"Frente Alvo: [X] COMMERCE\\nTipo: OFERTA_AFILIADO\\n\\nTeclado com switches blue, retroiluminação RGB e ABNT2.\"\n}\n────────────────────────────────────────────────────────────\n\n=== TODOS OS 27 TESTES PASSARAM ==="
+      }
+    ]
+  },
+  "desempenho": {
+    "etapas": {
+      "codigo": 0.07
+    },
+    "total_seg": 0.07
+  }
+}

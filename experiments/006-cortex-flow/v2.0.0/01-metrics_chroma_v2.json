@@ -1,0 +1,54 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "regla": "Regla CEO RS4 - Conexion Vectorial - Prompt 3",
+  "descripcion": "Conexion vectorial: ChromaDB persistente + coleccion 'decisoes' + embedding Ollama 'nomic-embed-text' + roundtrip real.",
+  "fecha_hora": "2026-09-23 11:58:27",
+  "fecha_hora_iso": "2026-09-23T11:58:27",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0"
+  },
+  "chroma": {
+    "client_persistente": true,
+    "data_dir_relativo": "./chroma_db_data",
+    "data_dir_absoluto": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\chroma_db_data",
+    "data_dir_existe": true,
+    "coleccion": "decisoes",
+    "coleccion_existe": true,
+    "count_con_sonda": 1,
+    "count_final_sin_sonda": 0,
+    "status": "OK"
+  },
+  "embedding_ollama": {
+    "modelo": "nomic-embed-text",
+    "api": "http://localhost:11434",
+    "modelos_disponibles": [
+      "nomic-embed-text:latest",
+      "qwen2.5:7b",
+      "qwen2.5:3b",
+      "llama3.2:3b"
+    ],
+    "modelo_presente_en_ollama": true,
+    "dimension_embedding": 768,
+    "latencia_embedding_s": 2.0862,
+    "latencia_embedding_ms": 2086.24,
+    "status": "OK"
+  },
+  "roundtrip": {
+    "insert_documento_sonda": "OK",
+    "query_n_results_esperado": 1,
+    "query_hits": 1,
+    "distancia_top1": 6e-08,
+    "formato_query_api": "dict",
+    "delete_documento_sonda": "OK",
+    "status": "OK"
+  },
+  "validacion": {
+    "py_compile_chroma_client": "OK",
+    "test_verificar_modelo_embedding": "OK",
+    "roundtrip_status": "OK",
+    "exit_code": 0,
+    "status": "SUCCESS"
+  }
+}

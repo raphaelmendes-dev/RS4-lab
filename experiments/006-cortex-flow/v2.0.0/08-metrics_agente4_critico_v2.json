@@ -1,0 +1,123 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Dose 2 (Fase 2) - Nó Agente 3 (Crítico Ácido) — Item 08.4",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Agente 3: auditoria cética/fria/cirúrgica sobre o material do estado (analise_mapeador, analise_techscout ou copy_comercial) + RAG no ChromaDB (coleção 'decisoes' → DNA da Filosofia RS4) + Ollama local (qwen2.5:7b, fallback qwen2.5:3b).",
+  "fecha_hora": "2026-09-27 20:41:04",
+  "fecha_hora_iso": "2026-09-27T20:41:04",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo": "COPY_OFFER",
+    "estado_caracteres": 716,
+    "chaves_disponibles": [
+      "entrada_bruta",
+      "frente_alvo",
+      "copy_comercial"
+    ],
+    "material_caracteres": 787,
+    "material_preview": "ENTRADA BRUTA (pedido original):\nIdeia: anúncio de Commerce — campanha de email marketing para lançar una oferta de R$ 99,00 na assinatura anual da plataforma de micro-saúde laboratorial, com copywriting persuasivo, landing page e call to action. Frente Alvo: [ ] LAB | [X] COMMERCE | [ ] GERAL.\n\nPRO",
+    "fuente_material": "copy_comercial"
+  },
+  "rag_chromadb": {
+    "coleccion": "decisoes",
+    "query_preview": "ENTRADA BRUTA (pedido original):\nIdeia: anúncio de Commerce — campanha de email marketing para lançar una oferta de R$ 99,00 na assinatura anual da plataforma de micro-saúde labora",
+    "n_resultados_requeridos": 3,
+    "total_resultados": 3,
+    "hits": [
+      {
+        "id": "dna_rs4_015",
+        "documento": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE\n\nfica estabelecido o seguinte padrão para qualquer projeto que envolva Cline, Ollama ou Qwen:\n\nPasta Metrics/ Obrigatória: Todo repositório deve ter e abrir uma pasta dedicada exclusivamente a métricas.   \n\nAvaliação Sistêmica pelo Cline: O Cline sempre deve rodar uma avaliação geral do sistema, executando testes de código e avaliando a si mesmo (desempenho, assertividade e execução).   \n\nPersistência Completa: Todos os resultados, relatórios de testes, tempos de execução e métricas de desempenho (do código e dos modelos no Ollama) devem ser salvos dentro da pasta Metrics/.   \nMedição Holística: A medição precisa ser completa, cobrindo:\nCódigo: Testes unitários/integrados, taxas de erro e saídas.   \nOllama/Modelos: Tempos por agente/chamada, latência, uso de tokens/s.\n\nDesempenho do Agente (Cline): Taxa de sucesso na execução das tarefas e precisão dos commits.",
+        "metadata": {
+          "secao": 15,
+          "tipo": "dna_filosofia",
+          "fuente": "filosofia_rs4.txt",
+          "seed_dna_v2": true,
+          "titulo": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE"
+        },
+        "distancia": 0.272278
+      },
+      {
+        "id": "dna_rs4_016",
+        "documento": "Nova Regra da Filosofia RS4\n\nA Governança por Checklists Vivos \"Todo ciclo de construção na RS4 inicia, avança e encerra por meio de um Checklist Vivo. \nO checklist é o mapa de voo: orienta os próximos passos, mede o progresso real e garante as proteções fundamentais do sistema.\"\n   \nPrincípios da Regra - Início Obrigatório: Toda conversa/ciclo de desenvolvimento inicia pela apresentação ou atualização do Checklist Mestre de Construção/Evolução.\nAtualização por Evidência [x]: Um item só é marcado como feito [x] mediante evidência de execução/teste real no terminal ou ambiente (nada de suposição ou avanço por pressa).   \nLiberdade de Escopo e Tamanho (IAs e Humano): O checklist não fica preso a exatamente 10 itens. A IA tem total autonomia e responsabilidade para expandir o checklist (15, 20, 30 itens ou mais) sempre que identificar a necessidade de cobrir pilares obrigatórios.   \n\nPilares Inegociáveis (A Quádrupla Trava): Todo checklist de versão deve contemplar obrigatoriamente:🛡️ Segurança & Proteção (Isolamento de credenciais, .env, .gitignore, sanitização de código).   \n\n📈 Escalabilidade & Arquitetura (Desempenho, resiliência, conteinerização, persistência).   \n📊 Métricas Reais & Medição (Taxa de erro/ruído, ROI do tempo, conversão, logs de execução).   \n⚖️ Privacidade & LGPD (Execução offline/local, soberania dos dados, kill-switch, termos das plataformas).   \n\nRitmo de Fechamento (Sessão Curta em 4 Pontos): A cada atualização ou fechamento de ciclo do checklist, mantemos o nosso padrão humano e direto em 4 itens: O que mudou , O que foi feito, O que a seção fez, O que era o item antes",
+        "metadata": {
+          "titulo": "Nova Regra da Filosofia RS4",
+          "seed_dna_v2": true,
+          "secao": 16,
+          "tipo": "dna_filosofia",
+          "fuente": "filosofia_rs4.txt"
+        },
+        "distancia": 0.291677
+      },
+      {
+        "id": "dna_rs4_011",
+        "documento": "COMO A IA DEVE TRABALHAR COM RAPHAEL\n\nQuando uma mudança importante for proposta:\n\n1. entender;\n2. discutir;\n3. planejar;\n4. definir escopo;\n5. Raphael aprovar;\n6. executar;\n7. verificar;\n8. registrar;\n9. versionar.\n\nNão avançar automaticamente para mudanças grandes.\n\nNão assumir que algo foi feito apenas porque foi planejado.\n\nNão inventar estado do Git.\n\nCommits somente em ingles\n\nNão inventar resultados experimentais.\n\nQuando houver dúvida:\n\nVERIFICAR EVIDÊNCIA.",
+        "metadata": {
+          "fuente": "filosofia_rs4.txt",
+          "seed_dna_v2": true,
+          "secao": 11,
+          "titulo": "COMO A IA DEVE TRABALHAR COM RAPHAEL",
+          "tipo": "dna_filosofia"
+        },
+        "distancia": 0.324568
+      }
+    ],
+    "latencia_ms": 2983.4139,
+    "status": "OK",
+    "erro": null
+  },
+  "prompt_critico": {
+    "fonte_regras": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\agentes\\agente3_critico.txt",
+    "caracteres_prompt": 3278,
+    "preview": "SYSTEM — AGENTE 3 (CRÍTICO ÁCIDO DE ENGENHARIA):\nVocê é o AGENTE 3 — O Crítico Ácido de Engenharia do RS4-cortex-flow.\nSua função é atuar como um revisor implacável para encontrar furos de lógica e riscos.\n\nDIRETRIZES:\n1. Esqueça elogios ou polidez. Seja direto, técnico e rigoroso.\n2. Identifique on"
+  },
+  "ollama": {
+    "modelo": "qwen2.5:7b",
+    "status_http": 200,
+    "latencia_ms": 147310.9175,
+    "tokens_prompt": 1084,
+    "tokens_resposta": 643,
+    "eval_duration_ms": 110273.79,
+    "done_reason": "stop",
+    "erro": null,
+    "fallback_usado": false,
+    "tentativas": [
+      {
+        "modelo": "qwen2.5:7b",
+        "status_http": 200,
+        "latencia_ms": 147310.9175,
+        "tokens_prompt": 1084,
+        "tokens_resposta": 643,
+        "eval_duration_ms": 110273.79,
+        "done_reason": "stop",
+        "erro": null,
+        "fallback_usado": false
+      }
+    ],
+    "url_api_generate": "http://localhost:11434/api/generate",
+    "temperatura": 0.2,
+    "num_predict": 1024
+  },
+  "nodo": {
+    "funcao": "nodo_critico",
+    "assinatura": "nodo_critico(state: CortexState) -> dict",
+    "duracao_total_ms": 150295.043,
+    "fuente_material": "copy_comercial",
+    "analise_critico_caracteres": 2197,
+    "analise_critico_preview": "[1] VEREDICTO\nEste anúncio de email marketing para a plataforma de micro-saúde laboratorial apresenta vários problemas técnicos, lógicos e de alinhamento com as diretrizes RS4. A proposta não resolve o problema de forma simples e eficiente, contendo várias falhas que podem comprometer a eficácia do ",
+    "contexto_rag_total": 3,
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_critico": "OK",
+    "nodo_estado": "OK",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

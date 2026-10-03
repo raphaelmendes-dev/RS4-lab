@@ -1,0 +1,203 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "item": "Checklist Mestre Item 07 - Seed DNA",
+  "regla": "Regla CEO RS4 - Semilla de memória / populación coleccion 'decisoes'",
+  "descripcion": "Ingestão da filosofia/DNA do RS4 (filosofia_rs4.txt) na coleção 'decisoes' do ChromaDB local (./chroma_db_data) com embedding Ollama 'nomic-embed-text' e métricas de latência real.",
+  "fecha_hora": "2026-09-23 13:54:54",
+  "fecha_hora_iso": "2026-09-23T13:54:54",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "archivo": "filosofia_rs4.txt",
+    "ruta_absoluta": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\filosofia_rs4.txt",
+    "caracteres_totales": 15027,
+    "lineas_totales": 537,
+    "secciones_detectadas": 19
+  },
+  "chunking": {
+    "estrategia": "bloques por seção numerada (delimitador '====')",
+    "total_bloques": 19,
+    "bloques": [
+      {
+        "id": "dna_rs4_000",
+        "numero": 0,
+        "titulo": "PREÁMBULO — CONTEXTO GENERAL",
+        "caracteres": 71,
+        "preview": "FILOSOFIA-RS4   RS4 MACHINE | AI RESEARCH LAB CONTEXTO GERAL DO PROJETO"
+      },
+      {
+        "id": "dna_rs4_001",
+        "numero": 1,
+        "titulo": "IDENTIDADE DO PROJETO",
+        "caracteres": 762,
+        "preview": "IDENTIDADE DO PROJETO  Nome:  RS4 Machine | AI Research Lab  Slogan:  \"Experimen"
+      },
+      {
+        "id": "dna_rs4_002",
+        "numero": 2,
+        "titulo": "FILOSOFIA FUNDAMENTAL",
+        "caracteres": 818,
+        "preview": "FILOSOFIA FUNDAMENTAL  A filosofia do RS4 Machine NÃO deve ser perdida, mesmo qu"
+      },
+      {
+        "id": "dna_rs4_003",
+        "numero": 3,
+        "titulo": "PRINCÍPIO DE RESPONSABILIDADE",
+        "caracteres": 581,
+        "preview": "PRINCÍPIO DE RESPONSABILIDADE  Princípios definidos para o RS4:  - Todo sistema "
+      },
+      {
+        "id": "dna_rs4_004",
+        "numero": 4,
+        "titulo": "MÉTODO DE TRABALHO",
+        "caracteres": 748,
+        "preview": "MÉTODO DE TRABALHO  O trabalho entre Raphael e a IA deve seguir uma lógica semel"
+      },
+      {
+        "id": "dna_rs4_005",
+        "numero": 5,
+        "titulo": "CONTEXTO HUMANO / APRENDIZADO",
+        "caracteres": 928,
+        "preview": "CONTEXTO HUMANO / APRENDIZADO  Raphael está construindo conhecimento técnico de "
+      },
+      {
+        "id": "dna_rs4_006",
+        "numero": 6,
+        "titulo": "VISÃO DE LONGO PRAZO",
+        "caracteres": 984,
+        "preview": "VISÃO DE LONGO PRAZO  Raphael não está trabalhando com pressa para conseguir um "
+      },
+      {
+        "id": "dna_rs4_007",
+        "numero": 7,
+        "titulo": "GITHUB E TRAJETÓRIA",
+        "caracteres": 860,
+        "preview": "GITHUB E TRAJETÓRIA  O GitHub deve funcionar como evidência da evolução técnica."
+      },
+      {
+        "id": "dna_rs4_008",
+        "numero": 8,
+        "titulo": "OPEN SOURCE",
+        "caracteres": 750,
+        "preview": "OPEN SOURCE  As contribuições Open Source são uma trilha paralela.  Elas NÃO pre"
+      },
+      {
+        "id": "dna_rs4_009",
+        "numero": 9,
+        "titulo": "RS4-LAB — REPOSITÓRIO",
+        "caracteres": 408,
+        "preview": "RS4-LAB — REPOSITÓRIO  Repositório:  https://github.com/raphaelmendes-dev/RS4-la"
+      },
+      {
+        "id": "dna_rs4_010",
+        "numero": 10,
+        "titulo": "QUATRO PROJETOS > UM MILHÃO DE PROJETOS",
+        "caracteres": 406,
+        "preview": "QUATRO PROJETOS > UM MILHÃO DE PROJETOS  Princípio de trabalho:  Poucos projetos"
+      },
+      {
+        "id": "dna_rs4_011",
+        "numero": 11,
+        "titulo": "COMO A IA DEVE TRABALHAR COM RAPHAEL",
+        "caracteres": 469,
+        "preview": "COMO A IA DEVE TRABALHAR COM RAPHAEL  Quando uma mudança importante for proposta"
+      },
+      {
+        "id": "dna_rs4_012",
+        "numero": 12,
+        "titulo": "PAPEL DO CLINE",
+        "caracteres": 371,
+        "preview": "PAPEL DO CLINE  Cline é uma ferramenta de execução dentro do ambiente de desenvo"
+      },
+      {
+        "id": "dna_rs4_013",
+        "numero": 13,
+        "titulo": "PAPEL DO OLLAMA",
+        "caracteres": 408,
+        "preview": "PAPEL DO OLLAMA  Ollama fornece a infraestrutura local para executar modelos.  O"
+      },
+      {
+        "id": "dna_rs4_014",
+        "numero": 14,
+        "titulo": "OBJETIVO MAIOR DO RS4 MACHINE",
+        "caracteres": 558,
+        "preview": "OBJETIVO MAIOR DO RS4 MACHINE  O laboratório não existe apenas para produzir cód"
+      },
+      {
+        "id": "dna_rs4_015",
+        "numero": 15,
+        "titulo": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE",
+        "caracteres": 918,
+        "preview": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE  fica estabelecido o seguinte padrã"
+      },
+      {
+        "id": "dna_rs4_016",
+        "numero": 16,
+        "titulo": "Nova Regra da Filosofia RS4",
+        "caracteres": 1617,
+        "preview": "Nova Regra da Filosofia RS4  A Governança por Checklists Vivos \"Todo ciclo de co"
+      },
+      {
+        "id": "dna_rs4_029",
+        "numero": 29,
+        "titulo": "PRINCÍPIO DE CONTINUIDADE",
+        "caracteres": 421,
+        "preview": "PRINCÍPIO DE CONTINUIDADE  Não perder a essência do RS4 Machine.  Mesmo quando s"
+      },
+      {
+        "id": "dna_rs4_031",
+        "numero": 31,
+        "titulo": "REGRA FINAL",
+        "caracteres": 641,
+        "preview": "REGRA FINAL  Este contexto deve ser tratado como continuidade do trabalho do RS4"
+      }
+    ]
+  },
+  "embedding_ollama": {
+    "modelo": "nomic-embed-text",
+    "api": "http://localhost:11434",
+    "modelos_disponibles": [
+      "nomic-embed-text:latest",
+      "qwen2.5:7b",
+      "qwen2.5:3b",
+      "llama3.2:3b"
+    ],
+    "modelo_presente_en_ollama": true,
+    "dimension_embedding": 768,
+    "latencia_embedding_s": 2.0716,
+    "latencia_embedding_ms": 2071.6,
+    "status": "OK"
+  },
+  "ingestion": {
+    "coleccion": "decisoes",
+    "modelo_embedding": "nomic-embed-text",
+    "data_dir_relativo": "./chroma_db_data",
+    "data_dir_absoluto": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\chroma_db_data",
+    "count_antes": 19,
+    "count_despues": 19,
+    "bloques_enviados": 19,
+    "latencia_ingestion_ms": 8270.8789,
+    "status": "OK"
+  },
+  "latencia": {
+    "latencia_total_s": 13.9715,
+    "latencia_total_ms": 13971.51,
+    "latencia_embedding_ms": 2071.6,
+    "latencia_ingestion_ms": 8270.8789
+  },
+  "validacion": {
+    "py_compile_seed_dna": "OK",
+    "embedding_status": "OK",
+    "coleccion": "decisoes",
+    "count_antes": 19,
+    "count_despues": 19,
+    "total_bloques": 19,
+    "todos_los_bloques_persistidos": true,
+    "exit_code": 0,
+    "status": "SUCCESS"
+  }
+}

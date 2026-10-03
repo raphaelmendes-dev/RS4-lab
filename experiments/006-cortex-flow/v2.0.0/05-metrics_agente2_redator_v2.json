@@ -1,0 +1,119 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Dose 2 (Fase 2) - Nó Agente Redator Comercial (Item 08.2)",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Agente Redator Comercial: RAG no ChromaDB (coleção 'decisoes') para resgatar tons e regras de ofertas do DNA + prompt do Redator + Ollama local (qwen2.5:7b, fallback qwen2.5:3b) + copy salva em drafts/ofertas/ (Markdown com carimbo de data/hora).",
+  "fecha_hora": "2026-09-27 17:07:26",
+  "fecha_hora_iso": "2026-09-27T17:07:26",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo": "COPY_OFFER",
+    "entrada_bruta_caracteres": 315,
+    "entrada_bruta_preview": "Ideia: anúncio de Commerce — campanha de email marketing para lançar uma oferta de assinatura anual da plataforma de micro-saúde laboratorial a R$ 99,00, com copywriting persuasivo, landing page e cal"
+  },
+  "rag_chromadb": {
+    "coleccion": "decisoes",
+    "query_preview": "Ideia: anúncio de Commerce — campanha de email marketing para lançar uma oferta de assinatura anual da plataforma de micro-saúde laboratorial a R$ 99,00, com copywriting persuasivo",
+    "n_resultados_requeridos": 3,
+    "total_resultados": 3,
+    "hits": [
+      {
+        "id": "test_redator_tom_oferta_2",
+        "documento": "TOM E REGRA DE OFERTA: Copywriting responsável — nunca inventar resultados, preços ou estatísticas. Tom otimista porém honesto; urgência leve em promoções reais; landing page com chamada clara para o próximo passo do lead.",
+        "metadata": {
+          "tipo": "ton_oferta",
+          "anio": 2026,
+          "probe_test": true
+        },
+        "distancia": 0.214319
+      },
+      {
+        "id": "test_redator_tom_oferta_1",
+        "documento": "TOM E REGRA DE OFERTA: As ofertas comerciais do RS4 usam tom direto, simples e persuasivo, sem promessas exageradas. Headline curta seguida de benefícios concretos e um CTA único. Focar no problema resolvido para o cliente, não nas features.",
+        "metadata": {
+          "anio": 2026,
+          "probe_test": true,
+          "tipo": "ton_oferta"
+        },
+        "distancia": 0.241781
+      },
+      {
+        "id": "dna_rs4_014",
+        "documento": "OBJETIVO MAIOR DO RS4 MACHINE\n\nO laboratório não existe apenas para produzir código.\n\nExiste para desenvolver uma forma de pensar.\n\nO objetivo é que Raphael consiga olhar para um problema e naturalmente perguntar:\n\n- Qual é a hipótese?\n- Qual é o baseline?\n- O que exatamente estamos medindo?\n- Qual é o critério de sucesso?\n- Quais são os riscos?\n- Quem toma a decisão?\n- Como interrompemos?\n- O que aprendemos?\n- O que justifica o próximo passo?\n\nA tecnologia deve aumentar a capacidade humana.\n\nNão substituir responsabilidade, entendimento ou julgamento.",
+        "metadata": {
+          "titulo": "OBJETIVO MAIOR DO RS4 MACHINE",
+          "fuente": "filosofia_rs4.txt",
+          "secao": 14,
+          "seed_dna_v2": true,
+          "tipo": "dna_filosofia"
+        },
+        "distancia": 0.312367
+      }
+    ],
+    "latencia_ms": 3147.0449,
+    "status": "OK",
+    "erro": null
+  },
+  "prompt_redator": {
+    "fonte_regras": "embutidas no nó (REGRAS_REDATOR) + tons/regras do DNA via RAG",
+    "caracteres_prompt": 2515,
+    "preview": "SYSTEM — AGENTE REDATOR COMERCIAL:\nVocê é o AGENTE REDATOR COMERCIAL do RS4-cortex-flow.\nSua função é transformar uma oferta/ideia bruta em uma copy comercial persuasiva e em um anúncio pronto para publicação.\nDIRETRIZES:\n1. Escreva em português do Brasil, com tom direto, claro e persuasivo, sem enr"
+  },
+  "ollama": {
+    "modelo": "qwen2.5:7b",
+    "status_http": 200,
+    "latencia_ms": 59682.0647,
+    "tokens_prompt": 801,
+    "tokens_resposta": 341,
+    "eval_duration_ms": 57365.15,
+    "done_reason": "stop",
+    "erro": null,
+    "fallback_usado": false,
+    "tentativas": [
+      {
+        "modelo": "qwen2.5:7b",
+        "status_http": 200,
+        "latencia_ms": 59682.0647,
+        "tokens_prompt": 801,
+        "tokens_resposta": 341,
+        "eval_duration_ms": 57365.15,
+        "done_reason": "stop",
+        "erro": null,
+        "fallback_usado": false
+      }
+    ],
+    "url_api_generate": "http://localhost:11434/api/generate",
+    "temperatura": 0.7,
+    "num_predict": 1024
+  },
+  "copy_draft": {
+    "diretorio": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\ofertas",
+    "arquivo_markdown": "oferta_20260927_170726.md",
+    "caminho_absoluto": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\ofertas\\oferta_20260927_170726.md",
+    "carimbo_data_hora": "oferta_20260927_170726.md",
+    "copy_caracteres": 1161,
+    "status": "OK"
+  },
+  "nodo": {
+    "funcao": "nodo_redator",
+    "assinatura": "nodo_redator(state: CortexState) -> dict",
+    "duracao_total_ms": 62881.6356,
+    "copy_comercial_caracteres": 1161,
+    "copy_comercial_preview": "# Aproveite 12 meses de micro-saúde laboratorial por apenas R$ 99,00!\n\n## Reduza custos e otimize processos com nossa plataforma de micro-saúde laboratorial\n\n## Benefícios concretos:\n- **Economia de até 50%**: Assine por um ano e desfrute de descontos significativos.\n- **Relatórios personalizados**:",
+    "contexto_rag_total": 3,
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_redator": "OK",
+    "nodo_estado": "OK",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

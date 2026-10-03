@@ -1,0 +1,40 @@
+{
+  "versao": "v3.0",
+  "gerado_em": "2026-09-28T12:13:51",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "host": "DESKTOP-DHI1KTQ"
+  },
+  "codigo": {
+    "compileall": {
+      "status": "ok",
+      "duracao_seg": 0.115,
+      "erros": 0
+    },
+    "testes": {
+      "total": 1,
+      "sucesso": 1,
+      "falhas": 0,
+      "taxa_sucesso_pct": 100.0,
+      "excecoes_total": 0,
+      "taxa_excecoes_pct": 0.0
+    },
+    "detalhes_testes": [
+      {
+        "teste": "test_db_manager.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.115,
+        "excecoes": 0,
+        "resumo_saida": "==============================================================\n  RS4 Commerce v3.0 — Passo 04 · db_manager.py\n==============================================================\n  [OK] py_compile: db_manager.py\n\n--- B) inicializar_banco ---\n  [OK] B1. inicializar_banco() retorna o caminho absoluto do banco\n  [OK] B2. Arquivo .db criado em disco\n  [OK] B3. Diretório 'sub/' criado automaticamente (mkdir -p)\n\n--- C) Schema ---\n  [OK] C1. Tabela 'oportunidades' existe\n  [OK] C2. Colunas de 'oportunidades' corretas\n  [OK] C3. Tabela 'decisoes' existe\n  [OK] C4. Colunas de 'decisoes' corretas\n  [OK] C5. 'id' é PRIMARY KEY em oportunidades\n  [OK] C6. 'id' é PRIMARY KEY em decisoes\n  [OK] C7. Índice idx_oportunidades_tipo criado\n\n--- D) salvar_oportunidade ---\n  [OK] D1. salvar_oportunidade() retorna str não-vazia\n  [OK] D2. item_id é SHA-256 hex do link\n  [OK] D3. Linha gravada em 'oportunidades'\n  [OK] D4. título preservado corretamente\n  [OK] D5. link_sanitizado preservado\n  [OK] D6. tipo_entrada preservado\n  [OK] D7. Decisão inicial 'PENDENTE' criada em 'decisoes'\n\n--- E) existe_oportunidade ---\n  [OK] E1. existe_oportunidade() → True para link já gravado\n  [OK] E2. existe_oportunidade() → False para link novo\n  [OK] E3. FileNotFoundError para banco inexistente (esperado)\n\n--- F) Idempotência ---\n  [OK] F1. IntegrityError ao reinserir link duplicado (esperado)\n  [OK] F2. Guarda existe_oportunidade() evita IntegrityError (padrão de uso)\n\n--- G) Validação tipo_entrada ---\n  [OK] G1. ValueError para tipo_entrada inválido (esperado)\n  [OK] G2. Nada gravado com tipo inválido\n\n--- H) Validação titulo vazio ---\n  [OK] H1. ValueError para título vazio (esperado)\n\n--- I) atualizar_decisao ---\n  [OK] I1. atualizar_decisao() retorna True para item existente\n  [OK] I2. Histórico de decisoes acumulado (2 linhas: PENDENTE + ENVIADO_CORTEX)\n  [OK] I3. Segunda decisão é 'ENVIADO_CORTEX'\n  [OK] I4. atualizar_decisao() → False para item_id inexistente\n\n--- J) status inválido ---\n  [OK] J1. ValueError para status inválido (esperado)\n\n--- K) listar_oportunidades ---\n  [OK] K1. listar_oportunidades() retorna lista\n  [OK] K2. Filtro tipo='OFERTA_AFILIADO' funciona\n  [OK] K3. Filtro tipo='OPORTUNIDADE_FREELA' funciona\n  [OK] K4. Filtro status='PENDENTE' retorna pelo menos 1 item\n  [OK] K5. Filtro status='ENVIADO_CORTEX' retorna pelo menos 1 item\n\n--- L) resumo_banco ---\n  [OK] L1. resumo_banco() retorna dict\n  [OK] L2. 'total_oportunidades' >= 2\n  [OK] L3. 'total_decisoes' >= total_oportunidades\n  [OK] L4. 'por_tipo' contém OFERTA_AFILIADO\n  [OK] L5. 'por_status' contém PENDENTE\n  [OK] L6. resumo_banco() retorna 'erro' para banco inexistente\n\n--- M) Isolamento de path ---\n  [OK] M1. Banco de produção isolado (ainda não existe — OK para CI)\n  [OK] M2. Item gravado no banco de teste\n\n==============================================================\n  TODOS OS 44 TESTES PASSARAM ✔\n=============================================================="
+      }
+    ]
+  },
+  "desempenho": {
+    "etapas": {
+      "codigo": 0.115
+    },
+    "total_seg": 0.115
+  }
+}

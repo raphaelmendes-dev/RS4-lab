@@ -1,0 +1,132 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Item 08.5 - Nó Agente 4 (Sintetizador & Refinador)",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Agente 4: consolidação das análises do Mapeador, Tech Scout e Crítico + RAG no ChromaDB (coleção 'decisoes' → DNA da Filosofia RS4) + Ollama local (qwen2.5:7b, fallback qwen2.5:3b) + YAML Front-Matter + salvamento em drafts/refinados/.",
+  "fecha_hora": "2026-09-28 11:14:45",
+  "fecha_hora_iso": "2026-09-28T11:14:45",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo": "LAB",
+    "tamanho_entrada_bruta": 156,
+    "tamanho_analise_mapeador": 285,
+    "tamanho_analise_techscout": 246,
+    "tamanho_analise_critico": 319,
+    "chaves_presentes": [
+      "entrada_bruta",
+      "frente_alvo",
+      "analise_mapeador",
+      "analise_techscout",
+      "analise_critico"
+    ]
+  },
+  "rag_chromadb": {
+    "coleccion": "decisoes",
+    "query_preview": "Desenvolver pipeline local de processamento e auditoria de exames clínicos usando Python, SQLite e IA local (Ollama), sem custos de infraestrutura ou nuvem.\nANÁLISE ESTRUTURAL — AG",
+    "n_resultados_requeridos": 3,
+    "total_resultados": 3,
+    "hits": [
+      {
+        "id": "dna_rs4_015",
+        "documento": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE\n\nfica estabelecido o seguinte padrão para qualquer projeto que envolva Cline, Ollama ou Qwen:\n\nPasta Metrics/ Obrigatória: Todo repositório deve ter e abrir uma pasta dedicada exclusivamente a métricas.   \n\nAvaliação Sistêmica pelo Cline: O Cline sempre deve rodar uma avaliação geral do sistema, executando testes de código e avaliando a si mesmo (desempenho, assertividade e execução).   \n\nPersistência Completa: Todos os resultados, relatórios de testes, tempos de execução e métricas de desempenho (do código e dos modelos no Ollama) devem ser salvos dentro da pasta Metrics/.   \nMedição Holística: A medição precisa ser completa, cobrindo:\nCódigo: Testes unitários/integrados, taxas de erro e saídas.   \nOllama/Modelos: Tempos por agente/chamada, latência, uso de tokens/s.\n\nDesempenho do Agente (Cline): Taxa de sucesso na execução das tarefas e precisão dos commits.",
+        "metadata": {
+          "seed_dna_v2": true,
+          "fuente": "filosofia_rs4.txt",
+          "tipo": "dna_filosofia",
+          "titulo": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE",
+          "secao": 15
+        },
+        "distancia": 0.292558
+      },
+      {
+        "id": "dna_rs4_011",
+        "documento": "COMO A IA DEVE TRABALHAR COM RAPHAEL\n\nQuando uma mudança importante for proposta:\n\n1. entender;\n2. discutir;\n3. planejar;\n4. definir escopo;\n5. Raphael aprovar;\n6. executar;\n7. verificar;\n8. registrar;\n9. versionar.\n\nNão avançar automaticamente para mudanças grandes.\n\nNão assumir que algo foi feito apenas porque foi planejado.\n\nNão inventar estado do Git.\n\nCommits somente em ingles\n\nNão inventar resultados experimentais.\n\nQuando houver dúvida:\n\nVERIFICAR EVIDÊNCIA.",
+        "metadata": {
+          "tipo": "dna_filosofia",
+          "titulo": "COMO A IA DEVE TRABALHAR COM RAPHAEL",
+          "seed_dna_v2": true,
+          "fuente": "filosofia_rs4.txt",
+          "secao": 11
+        },
+        "distancia": 0.307482
+      },
+      {
+        "id": "dna_rs4_016",
+        "documento": "Nova Regra da Filosofia RS4\n\nA Governança por Checklists Vivos \"Todo ciclo de construção na RS4 inicia, avança e encerra por meio de um Checklist Vivo. \nO checklist é o mapa de voo: orienta os próximos passos, mede o progresso real e garante as proteções fundamentais do sistema.\"\n   \nPrincípios da Regra - Início Obrigatório: Toda conversa/ciclo de desenvolvimento inicia pela apresentação ou atualização do Checklist Mestre de Construção/Evolução.\nAtualização por Evidência [x]: Um item só é marcado como feito [x] mediante evidência de execução/teste real no terminal ou ambiente (nada de suposição ou avanço por pressa).   \nLiberdade de Escopo e Tamanho (IAs e Humano): O checklist não fica preso a exatamente 10 itens. A IA tem total autonomia e responsabilidade para expandir o checklist (15, 20, 30 itens ou mais) sempre que identificar a necessidade de cobrir pilares obrigatórios.   \n\nPilares Inegociáveis (A Quádrupla Trava): Todo checklist de versão deve contemplar obrigatoriamente:🛡️ Segurança & Proteção (Isolamento de credenciais, .env, .gitignore, sanitização de código).   \n\n📈 Escalabilidade & Arquitetura (Desempenho, resiliência, conteinerização, persistência).   \n📊 Métricas Reais & Medição (Taxa de erro/ruído, ROI do tempo, conversão, logs de execução).   \n⚖️ Privacidade & LGPD (Execução offline/local, soberania dos dados, kill-switch, termos das plataformas).   \n\nRitmo de Fechamento (Sessão Curta em 4 Pontos): A cada atualização ou fechamento de ciclo do checklist, mantemos o nosso padrão humano e direto em 4 itens: O que mudou , O que foi feito, O que a seção fez, O que era o item antes",
+        "metadata": {
+          "fuente": "filosofia_rs4.txt",
+          "seed_dna_v2": true,
+          "titulo": "Nova Regra da Filosofia RS4",
+          "tipo": "dna_filosofia",
+          "secao": 16
+        },
+        "distancia": 0.314348
+      }
+    ],
+    "latencia_ms": 3737.4638,
+    "status": "OK",
+    "erro": null
+  },
+  "prompt_sintetizador": {
+    "fonte_regras": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\agentes\\agente4_sintetizador.txt",
+    "caracteres_prompt": 3818,
+    "preview": "SYSTEM — AGENTE 4 (SINTETIZADOR E DIRETOR DE ENTREGA):\nVocê é o AGENTE 4 — Sintetizador e Diretor de Entrega do RS4-cortex-flow.\nSua função é consolidar as análises dos Agentes 1, 2 e 3 e gerar o plano de ação final.\n\nDIRETRIZES:\n1. Sinta o parecer dos 3 agentes anteriores e resuma a decisão técnica"
+  },
+  "ollama": {
+    "modelo": "qwen2.5:7b",
+    "status_http": 200,
+    "latencia_ms": 201876.7215,
+    "tokens_prompt": 1253,
+    "tokens_resposta": 1032,
+    "eval_duration_ms": 175108.58,
+    "done_reason": "stop",
+    "erro": null,
+    "fallback_usado": false,
+    "tentativas": [
+      {
+        "modelo": "qwen2.5:7b",
+        "status_http": 200,
+        "latencia_ms": 201876.7215,
+        "tokens_prompt": 1253,
+        "tokens_resposta": 1032,
+        "eval_duration_ms": 175108.58,
+        "done_reason": "stop",
+        "erro": null,
+        "fallback_usado": false
+      }
+    ],
+    "url_api_generate": "http://localhost:11434/api/generate",
+    "temperatura": 0.3,
+    "num_predict": 1536
+  },
+  "sintese_draft": {
+    "diretorio": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\refinados",
+    "arquivo_markdown": "sintese_refinada_20260928_111445.md",
+    "caminho_absoluto": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\refinados\\sintese_refinada_20260928_111445.md",
+    "carimbo_data_hora": "sintese_refinada_20260928_111445.md",
+    "sintese_caracteres": 3583,
+    "status": "OK"
+  },
+  "nodo": {
+    "funcao": "nodo_sintetizador",
+    "assinatura": "nodo_sintetizador(state: CortexState) -> dict",
+    "duracao_total_ms": 205791.8825,
+    "sintese_caracteres": 3583,
+    "sintese_preview": "---\nPROJETO: RS4-cortex-flow v2\nDATA_EXECUCAO: '2026-09-28 11:14:45'\nMODELO_USADO: 'qwen2.5:7b'\nFRENTE_ALVO: 'LAB'\nSTATUS: 'CONCLUIDO'\n---\n\n# SÍNTESE FINAL E PLANO DE AÇÃO EXECUTIVO\n\n## 1. Decisão Técnica Final & Síntese Integrada\n\n**Resumo Convergente:**\n- **Mapeador Estrutural:** O pipeline de exa",
+    "contexto_rag_total": 3,
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_sintetizador": "OK",
+    "nodo_estado": "OK",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

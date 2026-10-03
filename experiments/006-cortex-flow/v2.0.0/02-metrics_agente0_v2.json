@@ -1,0 +1,55 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Dose 2 (Fase 2) - Nó Agente 0 (Triador / Roteador Dinâmico)",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Agente 0: triagem determinística da entrada_bruta -> COPY_OFFER (Copywriting/Anúncio) ou BUILDER_TEMPLATE (Freela/Vaga/Código); a intenção rota no campo 'frente_alvo' do CortexState.",
+  "fecha_hora": "2026-09-23 13:09:00",
+  "fecha_hora_iso": "2026-09-23T13:09:00",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo_previo": "",
+    "entrada_bruta_caracteres": 243,
+    "entrada_bruta_preview": "Ideia: anúncio de Commerce — campanha de email marketing para lançar uma oferta com copywriting persuasivo, landing page e call to action. Frente Alvo: [ ] LAB | [X] COMMERCE | [ ] GERAL. Objetivo: in"
+  },
+  "clasificacion": {
+    "intencao": "COPY_OFFER",
+    "frente_alvo_nuevo": "COPY_OFFER",
+    "score_copy_offer": 13,
+    "score_builder_template": 0,
+    "pistas_copy_detectadas": [
+      "copy",
+      "copywriting",
+      "anuncio",
+      "oferta",
+      "promo",
+      "marketing",
+      "email marketing",
+      "landing page",
+      "venda",
+      "call to action"
+    ],
+    "pistas_builder_detectadas": [],
+    "marcadores_frente_detectados": [
+      "commerce"
+    ]
+  },
+  "nodo": {
+    "funcao": "nodo_triagem",
+    "assinatura": "nodo_triagem(state: CortexState) -> dict",
+    "duracao_total_ms": 0.1709,
+    "frente_alvo_nuevo": "COPY_OFFER",
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_triagem": "OK",
+    "nodo_estado": "OK",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

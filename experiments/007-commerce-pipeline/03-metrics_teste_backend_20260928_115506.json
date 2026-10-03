@@ -1,0 +1,48 @@
+{
+  "versao": "v3.0",
+  "gerado_em": "2026-09-28T11:55:06",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "host": "DESKTOP-DHI1KTQ"
+  },
+  "codigo": {
+    "compileall": {
+      "status": "ok",
+      "duracao_seg": 0.128,
+      "erros": 0
+    },
+    "testes": {
+      "total": 2,
+      "sucesso": 2,
+      "falhas": 0,
+      "taxa_sucesso_pct": 100.0,
+      "excecoes_total": 0,
+      "taxa_excecoes_pct": 0.0
+    },
+    "detalhes_testes": [
+      {
+        "teste": "test_utils_links.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.06,
+        "excecoes": 0,
+        "resumo_saida": "[OK] py_compile: utils_links.py\n[OK] 1. URL simples da Amazon (?)\n[OK] 2. URL com parâmetros existentes (&)\n[OK] 3. URL com tag existente (substituição)\n[OK] 4. URL de outro domínio (passthrough inalterado)\n[OK] 5. amzn.to short link (passthrough, tag embebida)\n[OK] 6. Shopee (rede extensible -> af_web_id)\n[OK] 7. Mercado Livre (rede extensible -> as)\n[OK] 8. Lomadee (reconhecida sin parámetro -> passthrough)\n[OK] 9. URL com fragmento preservado\n[OK] 10. Host em maiúsculas (normalizado)\n[OK] 11. Idempotência (segunda chamada não duplica a tag)\n[OK] 12. URL vazia / tag vazia -> passthrough\n[OK] 13. detectar_rede (amazon / shopee / desconhecido)\n\n=== TODOS OS TESTES PASSARAM ==="
+      },
+      {
+        "teste": "test_exportador_cortex.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.068,
+        "excecoes": 0,
+        "resumo_saida": "============================================================\nRS4 Cortex-Flow V2 — Teste exportador_cortex.py\n============================================================\n[OK] py_compile: exportador_cortex.py\n[OK] B1. Arquivo JSON criado em disco\n[OK] C1. Payload contém todas as 6 chaves obrigatórias\n[OK] C2. 'origem' é str\n[OK] C3. 'timestamp' é str\n[OK] C4. 'tipo_entrada' é str\n[OK] C5. 'titulo' é str\n[OK] C6. 'link_sanitizado' é str\n[OK] C7. 'entrada_bruta' é str\n[OK] C8. 'origem' == 'RS4COMMERCE'\n[OK] C9. 'tipo_entrada' == 'OFERTA_AFILIADO'\n[OK] C10. 'titulo' == título do item\n[OK] C11. 'timestamp' formato ISO-8601 UTC (termina em Z)\n[OK] D1. 'link_sanitizado' contém tag=py4machine-20\n[OK] D2. 'link_sanitizado' preserva psc=1\n[OK] G1. 'entrada_bruta' inicia com 'Frente Alvo: [X] COMMERCE'\n[OK] G2. 'entrada_bruta' segunda linha: 'Tipo: OFERTA_AFILIADO'\n[OK] G3. 'entrada_bruta' contém a descrição do item\n[OK] B2. Payload em disco igual ao retornado pela função\n[OK] D3. Domínio externo: link_sanitizado inalterado (passthrough)\n[OK] D4. tipo_entrada 'OPORTUNIDADE_FREELA' aceito\n[OK] D5. amzn.to short link: link_sanitizado inalterado (passthrough)\n[OK] E1. Diretório criado automaticamente (mkdir -p)\n[OK] F1. ValueError lançado para tipo inválido\n[OK] F2. Arquivo NÃO gravado em caso de tipo inválido\n[OK] H1. Idempotência: segunda gravação produz JSON válido\n[OK] H2. Shopee: link_sanitizado contém af_web_id=py4machine-20\n\n────────────────────────────────────────────────────────────\nJSON de teste gerado (payload_ref):\n────────────────────────────────────────────────────────────\n{\n  \"origem\": \"RS4COMMERCE\",\n  \"timestamp\": \"2026-09-28T14:55:06Z\",\n  \"tipo_entrada\": \"OFERTA_AFILIADO\",\n  \"titulo\": \"Teclado Mecânico Gamer XYZ\",\n  \"link_sanitizado\": \"https://www.amazon.com.br/dp/B0ABC123456?psc=1&tag=py4machine-20\",\n  \"entrada_bruta\": \"Frente Alvo: [X] COMMERCE\\nTipo: OFERTA_AFILIADO\\n\\nTeclado com switches blue, retroiluminação RGB e ABNT2.\"\n}\n────────────────────────────────────────────────────────────\n\n=== TODOS OS 27 TESTES PASSARAM ==="
+      }
+    ]
+  },
+  "desempenho": {
+    "etapas": {
+      "codigo": 0.128
+    },
+    "total_seg": 0.128
+  }
+}

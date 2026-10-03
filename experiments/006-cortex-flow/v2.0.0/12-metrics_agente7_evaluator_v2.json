@@ -1,0 +1,206 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "dose": "Item 08.7 - Nó Evaluator / Avaliador",
+  "regla": "Regla CEO RS4 - Telemetria de nó LangGraph",
+  "descripcion": "Nó Evaluator: avaliação do entregável das duas rotas (Rota A: rascunho de copy/oferta; Rota B: síntese refinada + MVP do Builder) contra os padrões de qualidade e critérios da Filosofia RS4 + RAG no ChromaDB (coleção 'decisoes') + Ollama local ('qwen2.5:7b', fallback 'qwen2.5:3b') + NOTA PRELIMINAR (1 a 5) + artefato de governança HITL em drafts/avaliacoes/.",
+  "fecha_hora": "2026-10-03 01:28:25",
+  "fecha_hora_iso": "2026-10-03T01:28:25",
+  "ambiente": {
+    "python": "3.14.2",
+    "chromadb_version": "1.5.9",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "workdir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2"
+  },
+  "entrada": {
+    "frente_alvo": "BUILDER_TEMPLATE",
+    "rota_detectada": "ROTA_B_BUILDER_TEMPLATE",
+    "fonte_entregavel": "sintese_final + codigo_mvp",
+    "fallback_usado": false,
+    "entregavel_ausente": false,
+    "tamanho_entregavel": 6731,
+    "componentes": [
+      {
+        "chave": "sintese_final",
+        "caracteres": 2954
+      },
+      {
+        "chave": "codigo_mvp",
+        "caracteres": 4226
+      }
+    ],
+    "caminhos_artefato": [
+      "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\templates\\template_mvp_20261003_011823.md"
+    ],
+    "chaves_presentes": [
+      "entrada_bruta",
+      "frente_alvo",
+      "analise_mapeador",
+      "analise_techscout",
+      "analise_critico",
+      "sintese_final",
+      "codigo_mvp",
+      "caminho_template_md",
+      "contexto_rag"
+    ]
+  },
+  "rag_chromadb": {
+    "coleccion": "decisoes",
+    "query_preview": "--- COMPONENTE: sintese_final | origem: Rota B — síntese refinada (Sintetizador) | caracteres originais: 2954 ---\n---\nPROJETO: RS4-cortex-flow v2\nDATA_EXECUCAO: '2026-10-03 01:11:5",
+    "n_resultados_requeridos": 5,
+    "total_resultados": 5,
+    "hits": [
+      {
+        "id": "dna_rs4_015",
+        "documento": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE\n\nfica estabelecido o seguinte padrão para qualquer projeto que envolva Cline, Ollama ou Qwen:\n\nPasta Metrics/ Obrigatória: Todo repositório deve ter e abrir uma pasta dedicada exclusivamente a métricas.   \n\nAvaliação Sistêmica pelo Cline: O Cline sempre deve rodar uma avaliação geral do sistema, executando testes de código e avaliando a si mesmo (desempenho, assertividade e execução).   \n\nPersistência Completa: Todos os resultados, relatórios de testes, tempos de execução e métricas de desempenho (do código e dos modelos no Ollama) devem ser salvos dentro da pasta Metrics/.   \nMedição Holística: A medição precisa ser completa, cobrindo:\nCódigo: Testes unitários/integrados, taxas de erro e saídas.   \nOllama/Modelos: Tempos por agente/chamada, latência, uso de tokens/s.\n\nDesempenho do Agente (Cline): Taxa de sucesso na execução das tarefas e precisão dos commits.",
+        "metadata": {
+          "seed_dna_v2": true,
+          "tipo": "dna_filosofia",
+          "titulo": "Nova Regra de Filosofia RS4 — CEO RS4MACHINE",
+          "fuente": "filosofia_rs4.txt",
+          "secao": 15
+        },
+        "distancia": 0.237864
+      },
+      {
+        "id": "dna_rs4_029",
+        "documento": "PRINCÍPIO DE CONTINUIDADE\n\nNão perder a essência do RS4 Machine.\n\nMesmo quando surgirem:\n\n- agentes;\n- modelos locais;\n- automações;\n- APIs;\n- múltiplos projetos;\n- infraestrutura;\n- ferramentas mais sofisticadas;\n\no princípio permanece:\n\nPLAN\n→ DO\n→ CHECK\n→ ACT\n\nExperimentar.\nMedir.\nEntender.\nConstruir com responsabilidade.\n\nO RS4 deve crescer sem perder sua capacidade de ser compreendido pelo humano que o construiu.",
+        "metadata": {
+          "tipo": "dna_filosofia",
+          "seed_dna_v2": true,
+          "fuente": "filosofia_rs4.txt",
+          "secao": 29,
+          "titulo": "PRINCÍPIO DE CONTINUIDADE"
+        },
+        "distancia": 0.256944
+      },
+      {
+        "id": "techscout_5dc6367151b9dc43",
+        "documento": "DECISÃO DO TECH SCOUT (memória gerada automaticamente):\nFrente alvo: BUILDER_TEMPLATE\nOrigem das buscas: chroma+web\nRelatório técnico:\n**RELATÓRIO TÉCNICO ENXUTO - AGENTE 2 (TECH SCOUT)**\n\n**1. Stack Sugerida:**\n- **Linguagem de Programação:** Python (R$ 0,00)\n- **Banco de Dados:** SQLite (R$ 0,00)\n- **Frontend:** HTML/CSS/JS (R$ 0,00)\n- **Geração de Template:** Jinja2 (R$ 0,00)\n- **Deploy Estático:** GitHub Pages (R$ 0,00)\n\n**2. Alternativas Viáveis:**\n- **Frontend Alternativo:** Vite.js (R$ 0,00) - Para uma configuração mais moderna e rápida.\n- **Banco de Dados Alternativo:** SQLite (R$ 0,00) - Embora não seja necessário, pode ser útil para futuras expansões.\n\n**3. Arquitetura e Boas Práticas:**\n- **Simplicidade:** A arquitetura deve ser simples e direta, evitando dependências desnecessárias.\n- **Modularidade:** Dividir o projeto em módulos menores (HTML, CSS, JS, Python) para facilitar a manutenção e reutilização.\n- **Testes:** Implementar testes unitários e integração usando PyTest (R$ 0,00) para garantir a qualidade do código.\n- **Documentação:** Manter uma documentação clara e concisa, seguindo o padrão de nomenclatura e estrutura definido pela RS4-cortex-flow.\n\n**4. Próximos Passos para a v1:**\n1. **Criação do Template:** Desenvolver o template de landing page com HTML/CSS/JS semântico.\n2. **Integração com Python:** Adicionar funcionalidades Python para gerenciar o conteúdo dinamicamente.\n3. **Implementação do Formulário:** Adicionar um formulário de contato funcional.\n4. **Deploy Estático:** Configurar o deploy estático usando GitHub Pages.\n5. **Testes:** Realizar testes de unidade e integração.\n6. **Documentação:** Documentar o projeto e criar um README com instruções de instalação e uso.\n\n**5. Observações:**\n- **Métricas:** Embora não seja necessário para a v1, considere a criação de uma pasta `Metrics` para futuras métricas de desempenho.\n- **Checklist:** Iniciar o ciclo de desenvolvimento com um Checklist Vivo, conforme estabelecido pela RS4-cortex-flow.\n\n**Conclusão:**\nA stack sugerida é simples, eficiente e alinhada com as diretrizes de custo R$ 0,00. A implementação seguirá práticas modernas e boas práticas de desenvolvimento, garantindo a reutilização e manutenção do projeto.",
+        "metadata": {
+          "origem": "chroma+web",
+          "salvo_em": "2026-10-01T17:58:55",
+          "frente_alvo": "BUILDER_TEMPLATE",
+          "tipo": "dec_techscout",
+          "modelo": "qwen2.5:7b"
+        },
+        "distancia": 0.265373
+      },
+      {
+        "id": "dna_rs4_031",
+        "documento": "REGRA FINAL\n\nEste contexto deve ser tratado como continuidade do trabalho do RS4 Machine | AI Research Lab.\n\nA IA deve:\n\n- preservar a filosofia;\n- preservar a rastreabilidade;\n- diferenciar planejado de executado;\n- valorizar evidência;\n- evitar conclusões prematuras;\n- ajudar Raphael a aprender;\n- não tomar decisões críticas por ele;\n- não aumentar o escopo sem necessidade;\n- priorizar compreensão sobre velocidade;\n- priorizar profundidade sobre quantidade.\n\nO objetivo não é construir rapidamente.\n\nO objetivo é construir algo que Raphael compreenda.\n\nRS4 MACHINE | AI RESEARCH LAB\n\nExperiment.\nMeasure.\nUnderstand.\nBuild responsibly.",
+        "metadata": {
+          "titulo": "REGRA FINAL",
+          "secao": 31,
+          "seed_dna_v2": true,
+          "tipo": "dna_filosofia",
+          "fuente": "filosofia_rs4.txt"
+        },
+        "distancia": 0.265669
+      },
+      {
+        "id": "dna_rs4_002",
+        "documento": "FILOSOFIA FUNDAMENTAL\n\nA filosofia do RS4 Machine NÃO deve ser perdida, mesmo que o projeto cresça, mude de tecnologia ou passe a trabalhar com sistemas mais complexos.\n\nPrincípio central:\n\n\"Experimentar primeiro. Medir. Entender. Só então escalar.\"\n\nO laboratório deve ser construído por camadas:\n\n1. Pequenos experimentos primeiro.\n2. Evidências antes de conclusões.\n3. Métricas antes de escala.\n4. Documentação antes de complexidade.\n5. Entendimento antes de automação.\n\nO objetivo não é simplesmente produzir software.\n\nO objetivo é aprender como construir, avaliar, operar e melhorar sistemas inteligentes.\n\nSempre perguntar:\n\n- O que estamos tentando descobrir?\n- Como saberemos se funcionou?\n- Como vamos medir?\n- O que pode dar errado?\n- Como interromper?\n- O que aprendemos?\n- O que justifica o próximo passo?",
+        "metadata": {
+          "secao": 2,
+          "seed_dna_v2": true,
+          "tipo": "dna_filosofia",
+          "titulo": "FILOSOFIA FUNDAMENTAL",
+          "fuente": "filosofia_rs4.txt"
+        },
+        "distancia": 0.273203
+      }
+    ],
+    "latencia_ms": 3143.7367,
+    "status": "OK",
+    "erro": null
+  },
+  "prompt_evaluator": {
+    "fonte_regras": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\agentes\\agente6_evaluator.txt",
+    "caracteres_prompt": 11883,
+    "preview": "SYSTEM — AGENTE EVALUATOR / AVALIADOR DE QUALIDADE (RS4 CORTEX-FLOW):\nVocê é o AGENTE EVALUATOR — O Avaliador de Qualidade do RS4-cortex-flow.\n\nSua função é avaliar o entregável final das rotas de produção (Rota A: rascunho de copy/oferta do Redator; Rota B: síntese refinada + MVP do Builder) contra"
+  },
+  "ollama": {
+    "modelo": "qwen2.5:3b",
+    "status_http": 200,
+    "latencia_ms": 152343.1526,
+    "tokens_prompt": 3676,
+    "tokens_resposta": 670,
+    "eval_duration_ms": 68805.56,
+    "tokens_por_segundo": 9.74,
+    "done_reason": "stop",
+    "erro": null,
+    "fallback_usado": true,
+    "tentativas": [
+      {
+        "modelo": "qwen2.5:7b",
+        "status_http": null,
+        "latencia_ms": 242070.7901,
+        "tokens_prompt": null,
+        "tokens_resposta": null,
+        "eval_duration_ms": null,
+        "tokens_por_segundo": null,
+        "done_reason": null,
+        "erro": "TimeoutError: timed out",
+        "fallback_usado": false
+      },
+      {
+        "modelo": "qwen2.5:3b",
+        "status_http": 200,
+        "latencia_ms": 152343.1526,
+        "tokens_prompt": 3676,
+        "tokens_resposta": 670,
+        "eval_duration_ms": 68805.56,
+        "tokens_por_segundo": 9.74,
+        "done_reason": "stop",
+        "erro": null,
+        "fallback_usado": true
+      }
+    ],
+    "url_api_generate": "http://localhost:11434/api/generate",
+    "temperatura": 0.2,
+    "num_predict": 1024
+  },
+  "avaliacao": {
+    "nota_preliminar": 4,
+    "nota_identificada": true,
+    "origem_nota": "rotulo_preliminar",
+    "nota_minima_aprovacao": 4,
+    "recomendacao_hitl": "APROVAR",
+    "decisao_final": "PENDENTE_HUMANO (governança HITL)",
+    "parecer_caracteres": 2431,
+    "parecer_preview": "NOTA_PRELIMINAR: 4\n\n## 1. VEREDICTO PRELIMINAR\n- A proposta apresenta um MVP robusto e alinhado com os princípios de custo R$ 0,00, simplicidade radical e segurança. No entanto, falta implementação de testes unitários e integração, bem como validação do formulário de contato. A falta de documentação básica também é um ponto fraco.\n\n## 2. CRITÉRIOS AVALIADOS (EVIDÊNCIA)\n- **Utilidade Real:** A prop"
+  },
+  "artefato_hitl": {
+    "diretorio": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes",
+    "arquivo_markdown": "avaliacao_20261003_012825.md",
+    "caminho_absoluto": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\drafts\\avaliacoes\\avaliacao_20261003_012825.md",
+    "carimbo_data_hora": "avaliacao_20261003_012825.md",
+    "status_decisao": "AGUARDANDO_DECISAO_HUMANA",
+    "nota_preliminar": 4,
+    "recomendacao_hitl": "APROVAR",
+    "status": "OK"
+  },
+  "nodo": {
+    "funcao": "nodo_evaluator",
+    "assinatura": "nodo_evaluator(state: CortexState) -> dict",
+    "duracao_total_ms": 397559.8047,
+    "rota": "ROTA_B_BUILDER_TEMPLATE",
+    "fonte_entregavel": "sintese_final + codigo_mvp",
+    "nota_preliminar": 4,
+    "recomendacao_hitl": "APROVAR",
+    "parecer_caracteres": 2431,
+    "parecer_preview": "NOTA_PRELIMINAR: 4\n\n## 1. VEREDICTO PRELIMINAR\n- A proposta apresenta um MVP robusto e alinhado com os princípios de custo R$ 0,00, simplicidade radical e segurança. No entanto, falta implementação de testes unitários e integração, bem como validação do formulário de contato. A falta de documentação",
+    "contexto_rag_total": 5,
+    "estado": "OK"
+  },
+  "erros": [],
+  "validacion": {
+    "py_compile_evaluator": "OK",
+    "nodo_estado": "OK",
+    "nota_preliminar": 4,
+    "recomendacao_hitl": "APROVAR",
+    "status": "SUCCESS",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "versao": "v3.0",
+  "gerado_em": "2026-09-28T12:03:40",
+  "ambiente": {
+    "python": "3.14.2",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "host": "DESKTOP-DHI1KTQ"
+  },
+  "codigo": {
+    "compileall": {
+      "status": "ok",
+      "duracao_seg": 8.81,
+      "erros": 0
+    },
+    "testes": {
+      "total": 3,
+      "sucesso": 3,
+      "falhas": 0,
+      "taxa_sucesso_pct": 100.0,
+      "excecoes_total": 0,
+      "taxa_excecoes_pct": 0.0
+    },
+    "detalhes_testes": [
+      {
+        "teste": "coletor_multifrentes.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.0,
+        "excecoes": 0,
+        "resumo_saida": "4 freela(s) sanitizada(s)"
+      },
+      {
+        "teste": "coletor_ofertas.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 0.0,
+        "excecoes": 0,
+        "resumo_saida": "12 oferta(s) sanitizada(s)"
+      },
+      {
+        "teste": "exportador_cortex.py",
+        "ok": true,
+        "timeout": false,
+        "duracao_seg": 8.81,
+        "excecoes": 0,
+        "resumo_saida": "payload exportado → cortex_flow_v2\\inbox\\payload_commerce.json"
+      }
+    ]
+  },
+  "desempenho": {
+    "etapas": {
+      "codigo": 8.81
+    },
+    "total_seg": 8.81
+  },
+  "cortex_flow": {
+    "payload_exportado": true,
+    "itens_coletados": 16,
+    "itens_ofertas": 12,
+    "itens_freelas": 4,
+    "tipo_entrada": "OFERTA_AFILIADO",
+    "destino": "cortex_flow_v2\\inbox\\payload_commerce.json",
+    "ollama_acionado": false,
+    "duracao_total_seg": 8.81
+  }
+}

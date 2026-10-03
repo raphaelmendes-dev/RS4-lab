@@ -1,0 +1,67 @@
+{
+  "proyecto": "RS4-cortex-flow v2 (Cortex-Flow V2)",
+  "regla": "Regla CEO RS4 - Fundacion V2 - Prompt 1",
+  "descripcion": "Fundacion del paquete aislado cortex_flow_v2 y registro de metricas de setup",
+  "fecha_hora": "2026-09-23 11:33:05",
+  "fecha_hora_iso": "2026-09-23T11:33:05",
+  "ambiente_python": {
+    "version": "3.14.2",
+    "version_completa": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "sistema": "Windows",
+    "maquina": "DESKTOP-DHI1KTQ",
+    "ejecutable": "C:\\Users\\Raphael Mendes\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "stdlib_only": true,
+    "modulos_usados": [
+      "os",
+      "sys",
+      "json",
+      "platform",
+      "datetime",
+      "py_compile",
+      "pathlib"
+    ],
+    "dependencias_externas": "ninguna (solo stdlib)"
+  },
+  "estructura_v2": {
+    "metrics_dir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\Metrics",
+    "metrics_existe": true,
+    "cortex_flow_v2_dir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\cortex_flow_v2",
+    "cortex_flow_v2_creado": true,
+    "init_py_ruta": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\cortex_flow_v2\\__init__.py",
+    "init_py_existe": true,
+    "init_py_bytes": 0,
+    "confirmacion_creacion_cortex_flow_v2": "OK"
+  },
+  "prompt_2_estado_grafo": {
+    "descricao": "Estado do Grafo V2 - CortexState via TypedDict (typing stdlib)",
+    "fecha_hora_actualizacion": "2026-09-23 11:37:12",
+    "graph_dir": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\cortex_flow_v2\\graph",
+    "graph_dir_existe": true,
+    "state_py_ruta": "C:\\Users\\Raphael Mendes\\Desktop\\RS4-Cortex-Flow-v2\\cortex_flow_v2\\graph\\state.py",
+    "state_py_existe": true,
+    "state_py_bytes": 1042,
+    "state_py_sha256": "b918caf66720a86dff5180adb654ad516d3d5c8387368155a9b313a0d1b5ad04",
+    "base": "TypedDict",
+    "campos_definidos": [
+      "entrada_bruta: str",
+      "frente_alvo: str",
+      "analise_mapeador: str",
+      "analise_techscout: str",
+      "analise_critico: str",
+      "sintese_final: str",
+      "contexto_rag: list",
+      "erros: list"
+    ],
+    "py_compile_state_py": "OK",
+    "exit_code_py_compile": 0,
+    "import_verification": "OK",
+    "confirmacion_state_py_validado": "OK"
+  },
+  "validacion": {
+    "py_compile_cortex_flow_v2_init": "OK",
+    "py_compile_cortex_flow_v2_graph_state": "OK",
+    "exit_code": 0,
+    "status": "SUCCESS"
+  }
+}
